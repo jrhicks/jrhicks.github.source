@@ -21,48 +21,19 @@ Webpack takes modules with dependencies and generates static assets representing
 Its faster than gulp, and more powerful then browserify.  It rocks, and its time we start
 using it instead of relying on crufty gemified javascript and file soup.
 
-If you need additional motivation:
-
-* [Fast Rich Client Rails Development With Webpack and the ES6 Transpiler](http://www.railsonmaui.com/blog/2014/10/02/integrating-webpack-and-the-es6-transpiler-into-an-existing-rails-project/) - Justin Gordon
-
-* [Setting up Webpack with Rails](https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679) - Flarnie Marchan
-
-##Test Driving Webpack
-
-To get a quick taste of webpack and the hot-loader described in Justin's article I used his
-[tutorial repository](https://github.com/justin808/react-webpack-rails-tutorial).  Below are his instructions with a few additional notes where things
-got bumpy for me.
-
-1. Be sure that you have Node installed. I use nvm, with node version v0.10.33
- * Thanks to node-sass I found later versions of npm did not work
-1. git clone git@github.com:justin808/react-webpack-rails-tutorial.git
-1. cd react-webpack-rails-tutorial
-1. Check that you have Ruby 2.1.5 and the gemset Rails 4.2
- * RVM install was failing until I ran **rvm get head**
- * rvm install ruby-2.1.5
-1. bundle install
-1. npm install
- * I had a partial completion.  After much toying around, I found it best to restart from scratch.
- * rm -rf node_modules
- * npm install
-1. rake db:setup
-1. foreman start -f Procfile.dev
-1. Open a browser tab to http://0.0.0.0:4000 for the Rail app example.
-1. Open a browser tab to http://0.0.0.0:3000 for the Hot Module Replacement Example.
-
-##Simple Schemes
+##Simple Rails setups
 
 The hot-loader is awesome!  But in the spirit of simplification, you might want to
 look at some other Rails-Webpack schemes.
 
-[Rails with Webpack - Why and How](https://reinteractive.net/posts/213-rails-with-webpack-why-and-how) - Oct 24, 2014 - SEBASTIAN PORTO <br>
+* [Rails with Webpack - Why and How](https://reinteractive.net/posts/213-rails-with-webpack-why-and-how) - Oct 24, 2014 - SEBASTIAN PORTO <br>
 Support multiple entry points, use Webpack watch and place bundled builds into app/assets/javascript.
 
-[Setting Up Webpack with Rails](https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679) - Aug 15, 2014 - Flarnie Marchan
+* [Setting Up Webpack with Rails](https://medium.com/brigade-engineering/setting-up-webpack-with-rails-c62aea149679) - Aug 15, 2014 - Flarnie Marchan
 Use a similar approach, also introduces Loaders and has [example repository](https://github.com/flarnie/webpack_rails_demo)
 
 
-[WEBPACK IN THE RAILS ASSET PIPELINE](http://www.tomdooner.com/2014/05/26/webpack.html) - May 26, 2014 - Tim Dooner
+* [WEBPACK IN THE RAILS ASSET PIPELINE](http://www.tomdooner.com/2014/05/26/webpack.html) - May 26, 2014 - Tim Dooner
 This snippet of code integrates Webpack into the Sprockets build process using tasks!
 
 #Learning Flux
@@ -355,8 +326,6 @@ https://reactjsnews.com/react-style-guide-patterns-i-like/
 
 * How do we interact with async web requests?
 
-* How can we initialize our data?
-
 * This seems like a lot of boilerplate and a little nebulous, are there any libraries?
 
 ##Map Rails models to Flux Stores
@@ -444,22 +413,9 @@ than stores because:
  want to invoke actions from directly within your stores
 
 
-##Initialize Our Data
-
-Depending on isomorphic requirements, this rabbit hole might get deep, but I couldn't find any reason
-that having an initialize action wouldn't suffice.
-
-```javascript
-AppDispatcher.handleAction(
-  { action: StoreConstants.INITIALIZE,
-    data: {...}
-  }
-);
-```
-
 Getting the data from the database and running the method isomorphicly another issue.
 
-##Adopting a framework for the Flux Pattern
+##Adopting a Flux Library
 
 When people talk about Flux they mean more of a pattern than a framework. But Javascript community has already made a solid input into it and developed different approaches for working with Flux in order to bring some structure and “frameworky” feel. The first thing which comes to mind after some exploration - **there are too much Flux libraries right now**.
 

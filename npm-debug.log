@@ -1,0 +1,54 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'themes/bs3/package.json' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose node symlink /usr/bin/node
+5 warn package.json package@0.0.1 No repository field.
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'themes/bs3/package.json', null ]
+8 verbose cache add name=undefined spec="themes/bs3/package.json" args=["themes/bs3/package.json",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'themes/bs3/package.json',
+9 verbose parsed url   path: 'themes/bs3/package.json',
+9 verbose parsed url   href: 'themes/bs3/package.json' }
+10 silly lockFile c72f76b2-themes-bs3-package-json themes/bs3/package.json
+11 verbose lock themes/bs3/package.json /home/vagrant/.npm/c72f76b2-themes-bs3-package-json.lock
+12 verbose chmod /tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz 664
+13 verbose tar unpack /tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz
+14 silly lockFile a72141aa--7376744386274368-tmp-tgz-unpack tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack
+15 verbose lock tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack /home/vagrant/.npm/a72141aa--7376744386274368-tmp-tgz-unpack.lock
+16 silly lockFile 57a6b5c9-82213-0-7376744386274368-tmp-tgz tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz
+17 verbose lock tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz /home/vagrant/.npm/57a6b5c9-82213-0-7376744386274368-tmp-tgz.lock
+18 silly gunzTarPerm modes [ '775', '664' ]
+19 error not a package /tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz
+20 silly lockFile a72141aa--7376744386274368-tmp-tgz-unpack tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack
+21 silly lockFile a72141aa--7376744386274368-tmp-tgz-unpack tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack
+22 silly lockFile 57a6b5c9-82213-0-7376744386274368-tmp-tgz tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz
+23 silly lockFile 57a6b5c9-82213-0-7376744386274368-tmp-tgz tar:///tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz
+24 silly lockFile c72f76b2-themes-bs3-package-json themes/bs3/package.json
+25 silly lockFile c72f76b2-themes-bs3-package-json themes/bs3/package.json
+26 error addLocal Could not install themes/bs3/package.json
+27 error Error: ENOENT, open '/tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack/package.json'
+28 error If you need help, you may report this *entire* log,
+28 error including the npm and node versions, at:
+28 error     <http://github.com/npm/npm/issues>
+29 error System Linux 3.2.0-58-generic
+30 error command "/usr/bin/node" "/usr/bin/npm" "install" "themes/bs3/package.json"
+31 error cwd /home/vagrant/RubymineProjects/jrhicks.github.source
+32 error node -v v0.10.33
+33 error npm -v 1.4.28
+34 error path /tmp/npm-7227-w1Xbpiaa/1425597582213-0.7376744386274368/tmp.tgz-unpack/package.json
+35 error code ENOENT
+36 error errno 34
+37 verbose exit [ 34, true ]

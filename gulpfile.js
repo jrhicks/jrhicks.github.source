@@ -28,5 +28,5 @@ gulp.task('default', function() {
 });
 
 gulp.task('install', function() {
-    wikismith.core.install();
+  wikismith.install('themes');
 })

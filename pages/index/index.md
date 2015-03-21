@@ -8,7 +8,9 @@ theme: bs3
 
 ##Articles
 
-2015/03/05 - [[Reapp Test Drive]]
+2015/03/19 - [[Replicate Architecture Ideas For React-Flux Apps]]
+
+2015/03/14 - [[Client side Routing Notes]]
 
 2015/02/23 - [[Introduction to ES6]]
 

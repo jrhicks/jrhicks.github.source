@@ -214,7 +214,7 @@ maybe the action should be called BookActions.addToFavorites(book).
 
 We can go a step further.  What if the only actions where create, update, and
 delete?  This type of design constraint
-was the subject of DHH's 2006 keynote.
+was the subject of [DHH's 2006 keynote](http://www.slideshare.net/vishnu/discovering-a-world-of-resources-on-rails)
 In it he made a controversial but persuasive argument that if you've modeled
  your domain correctly that everything is CRUD.
 
@@ -231,4 +231,9 @@ db.favorites.insert({user: current_user.id, book: book});
 ```
 
 I'm certainly not suggesting this as an unbreakable rule.  You shouldn't have to make an update in order to show a drop-down menu or transition pages.  For all
-non-crud operations, just use React-Router.
+non-crud operations, just use React-Router
+
+#CQRS#
+
+In a [Case for Flux](https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6), Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
+[CQRS from Martin Fowler](http://martinfowler.com/bliki/CQRS.html)

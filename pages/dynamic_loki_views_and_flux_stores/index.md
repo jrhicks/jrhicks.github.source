@@ -237,3 +237,8 @@ non-crud operations, just use React-Router
 
 In a [Case for Flux](https://medium.com/@dan_abramov/the-case-for-flux-379b7d1982c6), Dan relates Flux to a foundational concept of Command Query Responsibility Segregation.  It is a very worthwhile read.  Here is more information on
 [CQRS from Martin Fowler](http://martinfowler.com/bliki/CQRS.html)
+
+#Conclusion
+
+I'm not suggesting that Flux is bad.  In fact I use it extensively in a [Map editing application](https://www.youtube.com/watch?v=HuaaEKpNEOU).  But if we can invoke its
+elements dynamicly, abstract away performance concerns, reduce coupling, and preserve CQRS - I think we should investigate it.

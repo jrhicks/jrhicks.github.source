@@ -174,6 +174,9 @@ Lets say I have 3 pages with 2 components each that all show, filter, and conver
 
 * Why can't I have less coupling?
 
+I love stores!  I just don't want to have to author a class for every
+store that is tightly coupled to the component it serves!
+
 #Database Solutions#
 
 ##Decoupling##
@@ -220,8 +223,12 @@ So in the above example the DHH way would be to:
 ```
 FavoritesActions.create({user: current_user.id, book: book})
 ```
+While this is quite an opinionated stance.  It certainly looks good for
+ditching ActionCreators and just using our collections.
 
-I'm certainly not suggesting this as an unbreakable rule.  You shouldn't have to make an update in order to show a drop-down menu or perform some other route changing user interaction.  (Maybe next blog post: its either CRUD our a Route Change!)
+```
+db.favorites.insert({user: current_user.id, book: book});
+```
 
-I do think that action creators would do nice to be named after data
-collections and for the actions on them to be CRUD.  As DHH says (I think) ... learn to love the CRUD.
+I'm certainly not suggesting this as an unbreakable rule.  You shouldn't have to make an update in order to show a drop-down menu or transition pages.  For all
+non-crud operations, just use React-Router.

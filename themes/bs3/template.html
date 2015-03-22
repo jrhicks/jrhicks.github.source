@@ -8,7 +8,7 @@
     <meta name="keywords" content="Wikismith">
 
     <title>
-        Jeffrey Hicks
+      <%=params.title%>
     </title>
 
     <!-- bower:css -->
@@ -99,9 +99,23 @@
 <%}%>
 <%-content%>
 <hr>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="jrhicks">Tweet</a>
+
 <a href="https://twitter.com/jrhicks">Follow Jeffrey Hicks on Twitter</a></a>
 <hr>
 <div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'jrhicksgithubio';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 </div>
 
 <div class="col-md-3">
@@ -144,20 +158,7 @@
 <!-- endinject -->
 
 
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES * * */
-    // Required: on line below, replace text in quotes with your forum shortname
-    var disqus_shortname = 'jrhicks';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
+<!-- TWITTER Put this just before the closing body tag -->
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>

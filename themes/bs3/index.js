@@ -72,10 +72,11 @@ function render(file) {
     var h3 = rowify_h3s(h2);
     //var h = leadify_h1s(h);
 
-    //gutil.log(JSON.stringify(marked.lexer(file.body)))
+    //gutil.log(JSON.stringify(file.page));
 
     return ejs.render(template, {
         params: file.params,
+        folder: file.page,
         content: h3,
         ast: marked.lexer(file.body)
     });
@@ -84,5 +85,3 @@ function render(file) {
 
 customizeMarked()
 module.exports = render;
-
-

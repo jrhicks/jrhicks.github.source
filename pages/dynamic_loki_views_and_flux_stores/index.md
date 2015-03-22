@@ -221,20 +221,7 @@ So in the above example the DHH way would be to:
 FavoritesActions.create({user: current_user.id, book: book})
 ```
 
-His example (if I can remember from 9 years ago) was about
-magazines and customers.  He illustrates a magazine controller
-that has the only CRUD actions: Create, Read, Update, Delete.
-An argument could be made that you need a "subscribe" action
-to magazine that takes a customer as a parameter.  But DHH
-asserts that what you really need is a subscriptions controller
-that you send the action "create".
+I'm certainly not suggesting this as an unbreakable rule.  You shouldn't have to make an update in order to show a drop-down menu or perform some other route changing user interaction.  (Maybe next blog post: its either CRUD our a Route Change!)
 
-This concept was taken so far that logging into a Rails
-website is implemented as /user_session/new instead of /login.
-
-I'm certainly not suggesting this type of strictness, I don't think
-people should have make an update to a relational database in order
-to show a drop-down menu or perform some other trivial user interaction.
-
-I do think that action creators would do nice to be named after the data
+I do think that action creators would do nice to be named after data
 collections and for the actions on them to be CRUD.  As DHH says (I think) ... learn to love the CRUD.

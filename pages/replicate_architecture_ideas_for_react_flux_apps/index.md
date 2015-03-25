@@ -1,5 +1,5 @@
 ---
-title: High Availability Eventually Consistent Flux
+title: Offline Flux with LokiJS
 subtitle: "Data fetching and replication for Offline React Single Page Applications"
 created: "Thu Mar 19 2015 20:14:25 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
@@ -16,7 +16,7 @@ In [my last post](/client_side_routing_notes/index.html), navigating **data spac
 
 * A Home Brewed [Offline Partitions Store](/client_side_routing_notes/index.html#md-offline-partitions-store)
 
-In this article I recap these patterns quickly, introduce a new pattern called Full Stack Flux, and I refine the design of a newly proposed pattern that draws on qualities of each of these, but favors High Availability with Eventual Consistency.
+In this article I recap these patterns quickly and introduce how an offline flux pattern and example project that draws on qualities of each of these.
 
 #Content Stores Pattern#
 
@@ -31,136 +31,94 @@ In this article I recap these patterns quickly, introduce a new pattern called F
 
 <img src="relay3.png" width="100%">
 
-#Full Stack Flux#
+#Offline Flux
 
-[Elie Rotenberg](https://twitter.com/elierotenberg) who writes about [Million User Webchat](https://blog.rotenberg.io/million-user-webchat-with-full-stack-flux-react-redis-and-postgresql/) has an awesome FLUX pattern for __Single Source Of Truth__.  Even more interesting to me is the replacement of the dispatcher with PGSQL notifications.
+I liked the pure flux of Dan's approach and the pure decoupling of Relay.  How could I combine  these ideas, into an architecture that featured a replicating database that could be used offline.
 
-<img src="full-stack-flux-pgsql.png" width="100%">
+<img src="offline_flux.png" width="100%">
 
-It goes through a lot of layers to get there, but the client component essentially updates the world by talking to
-the database.  This looks a little like updating shared-mutable-state, but I think this architecture shows that writing to a database (that notifies and dispatches) is different than writing to
-shared mutable state.
+##Replicate
 
-#High Availability Eventually Consistent Flux#
+In the diagram above, you might find Replicate to be placed oddly as a sibling of view.  You can consider Replicate as a background worker that initiates actions routinely.  Replicate listens to stores similarly to components, but instead of updating DOM it changes aspects of
+replication.
 
-I liked the pure flux of Dan's approach, the pure decoupling of Relay, and the database-as-a-notifier approach of Full Stack Flux PGSQL.  How could I combine all these ideas, into an architecture that relaxed the importance of __Single Source Of Truth__ in favor of higher availability and eventual consistency.
+ReplicateStore tells Replicate:
 
-<img src="rd.png" width="100%">
+* What to Replicate
 
-##Similarities to Full Stack Flux##
+* How frequently
 
-It looks like the view is accessing shared mutable state by writing to the replicated database, but much like the Full Stack Flux example, we are actually
-going to enforce single direction data flow and simply use the database as
-an event emitter.  With a high availability pattern, we can assume a large amount of data will be on our potentially offline devices, and we want to keep
-performance by leaning on the database's capabilities.  Different from Full Stack
-Flux, I've removed the layers between the view and the database so they can work
-offline.
+* Paging & Cursor Management
+
+```javascript
+class Replicate {
+
+  // Replicate (Like A Component) Listens to Stores
+  constructor() {
+    ReplicateStore.listen(this.onReplicationChange);
+    this.state = ReplicateStore.getState();
+  }
+
+  onReplicationChange() {
+    this.state = ReplicateStore.getState();
+  }
+
+  // Replicate Is Worker That Continuously Runs
+  async run() {
+    let resolution = 50;
+    while (true) {
+      if (this.state.shouldReplicate) {
+        await this.createReplicateAction();
+      }
+      await this.milliseconds(resolution);
+    }
+  }
+
+  // ...
+}
+```
+
+It works out nicely for replication duties and behavior to be governed by stores because the replicate worker and views can respond equally.
+
+##DB
+
+You will also notice a DB inside of Store.  This illustrates that access to the
+DB is mediated through the store.  When Replicate receives a page of data from
+the server it sends a queue action to the ReplicateStore.  ReplicateStore appends
+the data to its queue and loads it in 20 microsecond intervals.  [LokiJS](http://lokijs.org/) can knock out well over
+1000 in this time.  Similarly; basic insert, save, and delete operations are
+mediated through the store.
 
 ##Similarities to Content Stores##
 
-Much like Content Stores, the Replicated Database implements a collection for each
-different entity type and data is normalized.  The unidirectionality is preserved.  Shared mutable state appears to be violated in this pattern, but I propose that writing to a database (that emits events to actions) maintains immutability.  For performance gains I propose that views can read from the database, but only in reaction to stores and constrained!
+Much like Content Stores, data is stored normalized and the Flux pattern is respected.  Unlike Content Stores, the different entities are not separated
+into their own stores.  Data is segregated into collections (LokiJS's concept
+of a table).  Having all collections in one store keeps things real easy, but it might seem at the cost of components over-responding to changes from collections they don't care about.  However, if components check collection's updatedAt in shouldComponentUpdate they can remain lazy.
 
 ##Similarities to Relay##
 
-The replicated database only replicates subsets of the data on the server, these subsets are requested by the views when components mount.  Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.
-
-Relay provides composable GQL.  This pattern uses many subscriptions that act
-as basic filters to restrict the replicated data.
+Similar to Relay, the components control what data is fetched!  In this example we get the projectId from the router and tell the replicated database to include the notes and contacts for this project.
 
 ```
 componentWillMount() {
   let projectId = parseInt(this.getParams().projectId);
-  ReplicatedDatabase.addSubscription('note', {project_id: projectId} );
-  ReplicatedDatabase.addSubscription('contact', {project_id: projectId} );
+  ReplicateActions.subscribe('note', {project_id: projectId} );
+  ReplicateActions.subscribe('contact', {project_id: projectId} );
 },
 ```
 
-All the data is fetched by the ReplicatedDatabase and stored normalized into an in-memory database with persistence options.  The replicated database can syndicate its changes to actions, and from there we follow the traditional flux pattern.
-
-Similar to Relay, your server can have one generic server end point!  Which is awesome!  But you don't need GQL magic on the server, here is a basic implementation in Rails:
-
-```ruby
-#SERVER
-
-class OfflineController < ApplicationController
-  def download_updated()
-    scope = JSON.parse(params[:scope])
-    collection = scope[:collection]
-    filter = scope[:filter]
-
-    # Get ActiveRecord Class For Requested Entity From String
-    m = collection.camelize.constantize
-
-    if scope[:lastUpdatedCursor]
-      ci = scope[:lastIdCursor]
-      cu = DateTime.parse(scope[:lastUpdatedCursor])
-      data = m.where(filter)
-              .where(["updated_at > ? or (updated_at=? and id>?)", cu, cu, ci])
-              .order("updated_at asc, id asc")
-              .limit(250)
-    else
-      data = m.where(filter)
-              .order("updated_at asc, id asc")
-              .limit(250)
-    end
-    render text: data.to_json
-  end
-end
-```
-
-Here is the front end code in the Replicated database
-
-```
-// REPLICATED DATABASE
-
-import agent from 'superagent-promise';
-
-async downloadUpdatesFor(subscription) {
-  let i = subscription.lastIdCursor;
-  let d = subscription.lastUpdatedCursor;
-  do {
-    let scope = {
-                  collection: subscription.collection,
-                  filter: subscription.filter,
-                  lastIdCursor: i,
-                  lastUpdatedCursor: d
-                };
-    let scopeJson = encodeURIComponent(JSON.stringify(scope));
-    let url = `/offline/download_updated?scope=${scopeJson}`;
-    let response = await agent.get(url).end();
-    let data = JSON.parse(response.text);
-    await loadData(subscription, data);
-    let lastItem = data[data.length - 1];
-    if (lastItem) {
-      i = lastItem.id;
-      d = lastItem.updated_at;
-    }
-  } while (data.length > 0)
-}
-```
-
-Using [LokiJS](http://lokijs.org/) for storing the data.  Handling server updates would look something like:
-
-```
-for (let serverRecord of data) {
-  let localRecord = collection.findOne({id: serverRecord.id});
-  if (localRecord) {
-    # TODO
-  }
-  else {
-    collection.insert(serverRecord);
-    subscription.recordsDownloaded += 1;
-    subscription.save
-  }
-}
-```
+Similar to Relay, your server can have one generic server end point!  Which is awesome!  But you don't need GQL magic on the server, [here is a basic implementation in Rails](https://github.com/jrhicks/LokiJS-Flux-Example/blob/master/app/controllers/offline_controller.rb)
 
 ##Performance##
 
-I use this basic insertion algorithm to sync 10,000 records.  Here is how it performs:
+Its fast!   Thanks React and Loki!  In this video, I sync (download and insert into an offline database) over 10,000 records.  I'm using Flux to manage the replication
+process and update the React view component to display progress.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/cuN3tyuMED8" frameborder="0" allowfullscreen></iframe>
+While I'm pretty happy with 11,000 records in 4 seconds, I'm pretty sure I could
+make it a lot faster if I didn't wait until it was done loading each batch before
+I requested the next batch from the server.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W7htuT9ZJck" frameborder="0" allowfullscreen></iframe>
 
 ##Example Repository##
 

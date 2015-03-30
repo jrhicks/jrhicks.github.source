@@ -8,6 +8,8 @@ theme: bs3
 
 ##Articles
 
+2015/03/30 - [[Object Interface Mappers]]
+
 2015/03/19 - [[Replicate Architecture Ideas For React-Flux Apps]]
 
 2015/03/14 - [[Client side Routing Notes]]

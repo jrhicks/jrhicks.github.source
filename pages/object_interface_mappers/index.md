@@ -1,6 +1,6 @@
 ---
 title: Object Interface Mappers
-subtitle: "Runtime Model Reflection For Concise UI Declaration and Validation"
+subtitle: "Runtime Model Reflection For Concise UI Declaration and Validation In React"
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 theme: bs3

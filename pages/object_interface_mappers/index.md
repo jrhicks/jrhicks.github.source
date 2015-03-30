@@ -1,12 +1,26 @@
 ---
-title: Object Interface Mappers
-subtitle: "Runtime Model Reflection For Concise UI Declaration and Validation In React"
+title: Runtime Model Reflection For Concise UI Declaration and Validation In React
+subtitle: "Introduction to OIMs, JSON Schema, and TCOMB"
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 theme: bs3
 ---
 
-#Server Side UI Helpers
+#Introduction
+
+In this article I highlight an underlying capability of Rails that makes so many HTML Helpers
+and gems a pleasure to work with and introduce their client-side counterpart.
+
+I compare two enabling technologies for client side OIMs:
+
+* JSON Schema
+
+* TCOMB
+
+And finally we look at some amazing examples of using TCOMB to render react form
+components.
+
+##Server Side UI Helpers
 
 Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
 both the data schema and routes.
@@ -26,7 +40,7 @@ very popular simple_form and link_to.
 <%= link_to @user%>
 ```
 
-#Client Side OIMs
+##Client Side OIMs
 
 OIMS or (object interface mappers) provide the meta data to build interface components for our
 objects.

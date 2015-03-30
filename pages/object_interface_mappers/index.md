@@ -6,12 +6,13 @@ author: Jeffrey R. Hicks
 theme: bs3
 ---
 
-#Reflection Lost
+#Server Side UI Helpers
 
-Server side HTML rendering in Rails is easy and concise because Rails offers HTML helpers **reflection on
-the data schema and routes**.  
+Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
+both the data schema and routes.
 
-This **reflection powers** the concise Rails HTML Helpers: simple_form and link_to
+This **reflection capability** is the enabling commonality that powers many Rails helpers and gems including the
+very popular simple_form and link_to.
 
 ```erb
 <%= simple_form_for @user do |f| %>
@@ -25,9 +26,7 @@ This **reflection powers** the concise Rails HTML Helpers: simple_form and link_
 <%= link_to @user%>
 ```
 
-We lose this ability to reflect on the db schema and routes from the front-end.  How can we get that back?  
-
-#Introducing OIMs
+#Client Side OIMs
 
 OIMS or (object interface mappers) provide the meta data to build interface components for our
 objects.

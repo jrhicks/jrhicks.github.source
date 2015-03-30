@@ -1,6 +1,6 @@
 ---
-title: Runtime Model Reflection For Concise UI Declaration and Validation In React
-subtitle: "Introduction to OIMs, JSON Schema, and TCOMB"
+title: Runtime Reflection For React Forms
+subtitle: "Object Interace Mappers (tcomb, json-schema etc.)"
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 theme: bs3
@@ -17,7 +17,7 @@ I compare two enabling technologies for client side OIMs:
 
 * TCOMB
 
-And finally we look at some amazing examples of using TCOMB to render react form
+And finally we look at some [amazing demos](http://gcanti.github.io/tcomb-form/demo/index.html) of using TCOMB to render react form
 components.
 
 ##Server Side UI Helpers

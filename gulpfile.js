@@ -28,5 +28,25 @@ gulp.task('default', function() {
 });
 
 gulp.task('install', function() {
-  wikismith.install('themes');
+  npm_install('themes');
+  // bower_install();
+  // wikismith.install('themes');
 })
+
+function npm_install(theme_dir) {
+    theme_dir = typeof theme_dir !== 'undefined' ? theme_dir : 'themes';
+
+    var s2 = gulp.src('./'+theme_dir+'/*/package.json')
+        .pipe(wikismith.core.npm_install());
+
+    return s2;
+}
+
+function bower_install(theme_dir) {
+    theme_dir = typeof theme_dir !== 'undefined' ? theme_dir : 'themes';
+    var s1 = gulp.src('./'+theme_dir+'/*/bower.json')
+        .pipe(wikismith.core.bower_install());
+
+
+    return s1;
+}

@@ -1,6 +1,6 @@
 ---
 title: Runtime Reflection For React Forms
-subtitle: "Object Interace Mappers (tcomb, json-schema etc.)"
+subtitle: "Object Interface Mappers (tcomb, json-schema etc.)"
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 theme: bs3

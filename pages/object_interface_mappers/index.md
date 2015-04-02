@@ -1,5 +1,5 @@
 ---
-title: Runtime Reflection For React Forms
+title: React Form Generation
 subtitle: "Object Interface Mappers (tcomb, json-schema etc.)"
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
@@ -8,62 +8,39 @@ theme: bs3
 
 #Introduction
 
-In this article I highlight an underlying capability of Rails that makes so many HTML Helpers
-and gems a pleasure to work with and introduce their client-side counterpart.
+Here are two competing data definition
+libraries and the form generation components that accompany them:
 
-I compare two enabling technologies for client side OIMs:
+<table border=1 cellpadding="10">
+<thead>
+<tr>
+<th style="padding: 15px">Standard</th>
+<th style="padding: 15px">Form Component</th>
+<th style="padding: 15px">validation</th>
+<th style="padding: 15px">presentation customization</th>
+<th style="padding: 15px">demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="padding: 15px">json-schema</td>
+<td style="padding: 15px">plexus-form</td>
+<td style="padding: 15px">plexus-validate</td>
+<td style="padding: 15px">with classes</td>
+<td  style="padding: 15px"><a href="http://appliedmathematicsanu.github.io/plexus-form/">demo</a></td>
+</tr>
+<tr>
+<td style="padding: 15px">tcomb</td>
+<td style="padding: 15px">tcomb-form</td>
+<td style="padding: 15px">tcomb-validate</td>
+<td style="padding: 15px">layout and style</td>
+<td style="padding: 15px"><a href="http://gcanti.github.io/tcomb-form/demo/index.html">demo</a></td>
+</tr>
+</tbody>
+</table>
 
-* JSON Schema
-
-* TCOMB
-
-And finally we look at some [amazing demos](http://gcanti.github.io/tcomb-form/demo/index.html) of using TCOMB to render react form
-components.
-
-##Server Side UI Helpers
-
-Server side HTML rendering in Rails is easy and concise because Rails offers reflection on
-both the data schema and routes.
-
-This **reflection capability** is the enabling commonality that powers many Rails helpers and gems including the
-very popular simple_form and link_to.
-
-```erb
-<%= simple_form_for @user do |f| %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.button :submit %>
-<% end %>
-```
-
-```erb
-<%= link_to @user%>
-```
-
-##Client Side OIMs
-
-OIMS or (object interface mappers) provide the meta data to build interface components for our
-objects.
-
-[OIMs with Richard Kennard, Geraint Luff, and David Luecke](http://devchat.tv/js-jabber/150-jsj-oims) - Javascript Jabber 72 Minutes
 
 #JSON Schema
-
-JSON Schema
-
-* describes your existing data format
-
-* clear, human- and machine-readable documentation
-
-* complete structural validation, useful for
-
-JSON Hyper-Schema
-
-* describes your existing API - no new structures required
-
-* links (including URI Templates for target URIs)
-
-* forms - specify a JSON Schema for the desired data
 
 ```js
 {
@@ -74,10 +51,6 @@ JSON Hyper-Schema
 		"authorId": {"type": "integer"},
 		"message": {"type": "string"}
 	},
-	"links": [
-		{"rel": "self", "href": "/posts/{id}"},
-		{"rel": "author", "href": "/users/{authorId}"}
-	]
 }
 ```
 

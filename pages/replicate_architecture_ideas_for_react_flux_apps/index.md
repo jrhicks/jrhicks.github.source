@@ -50,7 +50,7 @@ ReplicateStore tells Replicate:
 
 * Paging & Cursor Management
 
-```javascript
+```js
 class Replicate {
 
   // Replicate (Like A Component) Listens to Stores

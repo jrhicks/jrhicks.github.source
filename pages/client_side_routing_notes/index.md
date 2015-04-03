@@ -292,7 +292,7 @@ If the user navigated to a different project, the notes store would create a new
 
 Lets look closer to what this might look like as an [alt store](https://github.com/goatslacker/alt)
 
-```
+```js
 import alt from '../alt';
 import PartitionActions from '../actions/PartitionActions';
 

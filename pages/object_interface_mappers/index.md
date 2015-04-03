@@ -6,10 +6,25 @@ author: Jeffrey R. Hicks
 theme: bs3
 ---
 
-#Introduction
+#Priorities
 
-Here are two competing data definition
-libraries and the form generation components that accompany them:
+In many server side frameworks, the HTML rendering ecosystems are rich and enjoyable because separate
+libraries and components can rely on a central mechanism to reflect on the
+data schema and routes.  This **reflection standard** (as it turns out) is more useful than
+just converting our data into SQL, its usefull for converting our data into UI.  
+
+Unfortunately the lack of need for an ORM in our front-end, leaves our front-end component ecosystem without a common reflection api.  Not only must different component authors of Forms, Grids, Calendars, Sign Boards, and Cross Tabs implement their own API; but the application author must learn each API and repeat the description of their data schema throughout their application.
+
+I assert that selecting the correct React Form Generation component is
+less important than selecting the right way to describe your data.  I hope
+the React community will promulgate a few good data description standards
+and that all sorts of components ranging from forms, tables, calendars, sign boards,
+and cross-tabs will use the same data schematic to provide rich functionality.
+
+Maybe we will start calling these data description standards that help us generate UI, OIMs or
+[Object Interface Mappers](http://devchat.tv/js-jabber/150-jsj-oims).
+
+#React Form Components
 
 <table border=1 cellpadding="10">
 <thead>
@@ -153,3 +168,12 @@ React.js powered UI library for developing forms writing less code.
 ## TCOMB Form Native
 
 * [tcomb-form-native](https://github.com/gcanti/tcomb-form-native) - react-native powered form-handling
+
+
+# See Also
+
+
+OIMS or (object interface mappers) provide the meta data to build interface components for our
+objects.
+
+[OIMs with Richard Kennard, Geraint Luff, and David Luecke](http://devchat.tv/js-jabber/150-jsj-oims) - Javascript Jabber 72 Minutes

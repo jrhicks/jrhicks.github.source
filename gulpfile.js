@@ -9,6 +9,12 @@ var app = express();
 var lr = tinylr();
 
 function serve() {
+    gulp.src('./pages/index/*.{png,jpg,gif,ttf,woff,eof,svg}')
+        .pipe(gulp.dest('./build'));
+
+    gulp.src('./pages/**/*.{png,jpg,gif,ttf,woff,eof,svg}')
+        .pipe(gulp.dest('./build'));
+
     wikismith.watch()
         .pipe(wikismith.pipeline())
         .pipe(gulp.dest('build'))

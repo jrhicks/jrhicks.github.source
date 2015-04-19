@@ -63,13 +63,33 @@ function rowify_h3s(html) {
     return html;
 }
 
+function addTwitterLinks(text) {
+    return text.replace(/[\@\#]([a-zA-Z]+[a-zA-z0-9_]*)/g,
+        function(m,m1) {
+            var t = '<a href="http://twitter.com/';
+            if(m.charAt(0) == '#')
+                t += 'hashtag/';
+            return t + encodeURI(m1) + '" target="_blank">' + m + '</a>';
+        });
+}
+
+function addTwitterAvitar(text) {
+    return text.replace(/[@@]([a-zA-Z]+[a-zA-z0-9_]*)/g,
+        function(m,m1) {
+            var t = '<img width="30px" src="http://avatars.io/twitter/';
+            return t + encodeURI(m1) + '"> @'+m1;
+        });
+}
 
 function render(file) {
     var template = String(fs.readFileSync(path.join(__dirname, 'template.html')));
 
-    var h = marked(file.body);;
+    //var b = addTwitterLinks(file.body);
+    var h = marked(file.body);
     var h2 = endify_headings(h);
     var h3 = rowify_h3s(h2);
+    h3 = addTwitterAvitar(h3);
+    h3 = addTwitterLinks(h3);
     //var h = leadify_h1s(h);
 
     //gutil.log(JSON.stringify(file.page));

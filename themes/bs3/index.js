@@ -64,7 +64,7 @@ function rowify_h3s(html) {
 }
 
 function addTwitterLinks(text) {
-    return text.replace(/[\@\#]([a-zA-Z]+[a-zA-z0-9_]*)/g,
+    return text.replace(/[\@]([a-zA-Z]+[a-zA-z0-9_]*)/g,
         function(m,m1) {
             var t = '<a href="http://twitter.com/';
             if(m.charAt(0) == '#')

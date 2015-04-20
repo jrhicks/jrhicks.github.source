@@ -21,6 +21,8 @@ Event Buzz
 
 * [Lumen](http://lumen.laravel.com/) - The stunningly fast micro-framework by Laravel.
 
+* [LR .Net User Group](http://lrdnug.org/ ) - Paul Gower worked on the lrdnug website which changed it's platform from ASPNET MVC to github pages and jekyllrb for ease of use.
+
 * [Little Rock MongoDB User Group](http://www.meetup.com/Little-Rock-MongoDB-User-Group/) - This group is a place for developers to learn more about the open source, JSON-based document database MongoDB. MongoDB is the leading NoSQL database and more people are adopting MongoDB everyday. So if you are facing challenges with MySQL, Postgres or Oracle and want to explore a more flexible, scalable alternative, please join us at one of our user group meetups. Our meetups typically consist of some pizza, networking and a presentation on MongoDB.
 
 * [Python Artists Of Arkansas](http://www.meetup.com/Python-Artists-of-Arkansas) - Whether just curious, a new programmer, or you remember clearing the moths out of your vacuum tubes, we want to see YOU! Primarily about the Python programming language, we want to encourage all "programming" and "technology" discussions - COME GEEK OUT!

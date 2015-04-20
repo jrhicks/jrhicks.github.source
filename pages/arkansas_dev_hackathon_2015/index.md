@@ -94,6 +94,8 @@ This is a really humble beginnings of a twitter directory for folks that attende
 
 @paulmgower - Principal Software Consultant and Architect
 
+@lrdnug - LR .Net User Group - Meetings Every 2nd Thursday of the month at @TheJointArgenta
+
 @thelukeirvin - Luke Irvin - @52_inc // http://52inc.com  // iOS Developer
 
 @rastreus - Russell Dillin - Family guy; Software Developer; Enjoys geeky hobbies, games and Netflix.

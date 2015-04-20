@@ -76,6 +76,12 @@ This is a really humble beginnings of a twitter directory for folks that attende
 
 @TheFwGuy - Stefano Bodini - What is more fun and interesting than create firmware?
 
+@ARGeekCentral - Geeks of Arkansas, Unite! Getting the word out to Geeks about AR Groups & Events
+
+@LittleRockGeek - LR Geek Breakfast - Each month attendees congregate over bacon, eggs and plenty of coffee to discuss topics like social media, digital marketing, design, & programming.
+
+@ConwayGeek - ConwayGeekBreakfast - Attendees congregate monthly over bacon, eggs and coffee to discuss social media, digital marketing, design, programming, and ways to better their communities.
+
 @jrhicks - Jeffrey Hicks - (Myself) Ruby On Rails Developer
 
 @locavorS - Shawn Goicoechea - Community organizer trying to participate locally in global movements that impact change. Love tweeting about awesome projects, tech, culture & world news

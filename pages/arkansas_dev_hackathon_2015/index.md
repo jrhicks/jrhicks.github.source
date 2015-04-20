@@ -29,9 +29,11 @@ Event Buzz
 
 * [iBeacon](http://en.wikipedia.org/wiki/IBeacon) is a new technology described by Apple Inc. as "a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence."[1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.[
 
-* [PWM signal with msp430](http://hanixdiy.blogspot.com/2015/04/msp430-setting-up-clock.html) 
+* [PWM signal with msp430](http://hanixdiy.blogspot.com/2015/04/msp430-setting-up-clock.html)
 
 * [CARL Bot](http://www.katv.com/Clip/10628256/maker-faire-carl-bot)
+
+* [MakerBot](http://www.makerbot.com/) - Powerful 3d printing
 
 * [Arkansas Robotics League](http://uark.edu/rso/uarc/) - Our organization aims to design, build, and test robots and automated machines through collaboration between the science, technology, engineering and mathematics (STEM) disciples.
 
@@ -46,6 +48,10 @@ Event Buzz
 * [SimpleCV](http://simplecv.org/) - Computer Vision platform using Python
 
 * Keyboards - Over 3 folks had brought nice tactile keyboards including the [Matias Tactile Pro](http://matias.ca/tactilepro/)
+
+* Sean Townsend was hacking on a retro shooter game for Android and iPhone.
+
+* Luke Irvin went through some swift tutorials.
 
 Twitter Directory
 =================
@@ -87,6 +93,8 @@ This is a really humble beginnings of a twitter directory for folks that attende
 @ltcoleman - Luke Coleman - Senior Software Developer that loves learning new technologies. I have a loving wife, great friends, supportive family and an amazing job. :)
 
 @digitalnico - Erica Nico - Coding, Gaming & Design.
+
+@jnesselr - Justin Nesselrotte - [blog.jnesselr.org](http://blog.jnesselr.org)
 
 Stuff I Talked About
 =========================

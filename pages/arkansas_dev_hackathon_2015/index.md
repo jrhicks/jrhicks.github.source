@@ -29,6 +29,8 @@ Event Buzz
 
 * [iBeacon](http://en.wikipedia.org/wiki/IBeacon) is a new technology described by Apple Inc. as "a new class of low-powered, low-cost transmitters that can notify nearby iOS 7 or 8 devices of their presence."[1] The technology enables a smart phone or other device to perform actions when in close proximity to an iBeacon.[
 
+* [PWM signal with msp430](http://hanixdiy.blogspot.com/2015/04/msp430-setting-up-clock.html) 
+
 * [CARL Bot](http://www.katv.com/Clip/10628256/maker-faire-carl-bot)
 
 * [Arkansas Robotics League](http://uark.edu/rso/uarc/) - Our organization aims to design, build, and test robots and automated machines through collaboration between the science, technology, engineering and mathematics (STEM) disciples.
@@ -60,7 +62,7 @@ This is a really humble beginnings of a twitter directory for folks that attende
 
 @startupdad - David Moody - Dad of a teen entrepreneur @overwatchapp // Startup mentor & investor, speaker, consultant, COO for hire // Founder of Jacksson David LLC
 
-@abby_simms - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I'll work with just about anything.
+@abby_sims - Abby Sims - Owner of Idestini Dev Studio. Web and mobile developer into design and usability. I'll work with just about anything.
 
 @SeanPTownsend - Tech and Tea Nerd.
 

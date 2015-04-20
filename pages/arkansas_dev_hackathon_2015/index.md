@@ -51,7 +51,7 @@ Event Buzz
 
 * Sean Townsend was hacking on a retro shooter game for Android and iPhone.
 
-* Luke Irvin went through some swift tutorials.
+* Luke Irvin went through some swift tutorials on [Team Treehouse](https://teamtreehouse.com/)
 
 Twitter Directory
 =================

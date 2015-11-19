@@ -55,6 +55,8 @@ Event Buzz
 
 * Luke Irvin went through some swift tutorials on [Team Treehouse](https://teamtreehouse.com/)
 
+* Some folks were working on a not-yet-released CMS written on Laravel due to their frustrations constantly having to patch security issues with their 40+ Drupal sites.
+
 Twitter Directory
 =================
 
@@ -79,6 +81,8 @@ This is a really humble beginnings of a twitter directory for folks that attende
 @TheFwGuy - Stefano Bodini - What is more fun and interesting than create firmware?
 
 @ARGeekCentral - Geeks of Arkansas, Unite! Getting the word out to Geeks about AR Groups & Events
+
+@tandrewbennett - Travis Bennett
 
 @LittleRockGeek - LR Geek Breakfast - Each month attendees congregate over bacon, eggs and plenty of coffee to discuss topics like social media, digital marketing, design, & programming.
 

@@ -8,6 +8,8 @@ theme: bs3
 
 ##Articles
 
+2015/12/18 - [[Into to Flux - Lab]]
+
 2015/11/19 - [[Intro to ReactJS - Lab]]
 
 2015/11/19 - [[Intro to ReactJS]]

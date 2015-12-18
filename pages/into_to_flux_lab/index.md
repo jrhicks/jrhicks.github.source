@@ -47,7 +47,207 @@ Original MVC from Smalltalk80.  1988
 
 * View - Views are React components.  They listen to changes in certain stores and re-render themselves as needed from data in 1 or more stores.  React components can respond to user events by dispatching actions.
 
+Flux Original
+=====
+
+## Actions
+
+* An action is data.
+
+* You write action creators.
+
+* Action creators create the data and send it the dispatcher.
+
+```
+var TodoActions = {
+
+  updateText: function(id, text) {
+    AppDispatcher.dispatch({
+      actionType: TodoConstants.TODO_UPDATE_TEXT,
+      id: id,
+      text: text
+    });
+  },
+
+  destroy: function(id) {
+  AppDispatcher.dispatch({
+    actionType: TodoConstants.TODO_DESTROY,
+    id: id
+  });
+}
+```
+
+## Dispatcher
+
+* Sends the action to all stores that have registered with it.
+
+* Only 1 dispatcher.
+
+## Stores
+
+* Register with the dispatcher.
+
+* Inspect the action and decide whether and how to update its data.
+
+* Emit Change
+
+```
+AppDispatcher.register(function(action) {
+  var text;
+
+  switch(action.actionType) {
+    case TodoConstants.TODO_CREATE:
+      text = action.text.trim();
+      if (text !== '') {
+        create(text);
+        TodoStore.emitChange();
+      }
+      break;
+
+    case TodoConstants.TODO_TOGGLE_COMPLETE_ALL:
+      if (TodoStore.areAllComplete()) {
+        updateAll({complete: false});
+      } else {
+        updateAll({complete: true});
+      }
+      TodoStore.emitChange();
+      break;
+```
+
+## View
+
+* These are React Components
+
+* Components can populate the default state fromt he store
+
+* When components mount, have them listen to emitted changes from the store
+
+* When components unmount, have them stop
+
+```
+function getTodoState() {
+  return {
+    allTodos: TodoStore.getAll(),
+    areAllComplete: TodoStore.areAllComplete()
+  };
+}
+
+var TodoApp = React.createClass({
+
+  getInitialState: function() {
+    return getTodoState();
+  },
+
+  componentDidMount: function() {
+    TodoStore.addChangeListener(this._onChange);
+  },
+
+  componentWillUnmount: function() {
+    TodoStore.removeChangeListener(this._onChange);
+  },
+
+  /**
+   * Event handler for 'change' events coming from the TodoStore
+   */
+  _onChange: function() {
+    this.setState(getTodoState());
+  }
+
+  render: function() {
+    /* Ommitted */
+  }
+```
+
+Flux Ecosystem
+====
+
+Flux is a convention not a library.  Even the dispatcher which is a library isn't that hard to re-write.
+
+* [Flux Comparison](https://github.com/voronianski/flux-comparison)
+
+* [Adopting a Flux Library](/getting_started_with_flux_on_rails/index.html#md-adopting-a-flux-library)
+
 Build TodoMVC using Flux
 =====
 
-* https://github.com/arkency/react_flux_alt_immutable_todolist
+* git clone https://github.com/arkency/react_flux_alt_immutable_todolist
+
+* cd flux_alt_immutable_todolist
+
+* grunt build
+
+* grunt serve
+
+## Review code base
+
+* Form responds to input
+
+* Todo items respond
+
+## Clippy
+
+Time magazine named Clippy one of the 50 worst inventions.  Sounds like a  good idea.
+
+<img src="http://img.timeinc.net/time/photoessays/2010/worst_inventions/worstinventions_clippy.jpg" width="20%">
+
+```
+import ImmutableStore from 'alt/utils/ImmutableUtil';
+import AltInstance    from 'lib/AltInstance';
+import Actions        from 'actions/TodoList';
+
+class ClippyStore {
+  constructor() {
+    let { addTask, removeTask } = Actions;
+
+    this.bindListeners({
+      add: addTask,
+      remove: removeTask
+    });
+
+    this.state = "Hello :)";
+  }
+
+  add(task) {
+    console.log("Got It! Task noted.");
+    return this.setState("Got it!  Task noted.");
+  }
+
+  remove(taskID) {
+    return this.setState("Awesome!");
+  }
+}
+
+export default AltInstance.createStore(ImmutableStore(ClippyStore));
+```
+
+## Clippy View
+
+* Create class -vs- ES6 Classes
+
+```
+import React from 'react/addons';
+import { Alert } from 'react-bootstrap';
+import ClippyStore from 'stores/Clippy';
+
+class Clippy extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = { message: ClippyStore.getState() };
+    this.onChange = this.onChange.bind(this);
+  }
+
+  componentDidMount()    { ClippyStore.listen(this.onChange); }
+  componentWillUnmount() { ClippyStore.unlisten(this.onChange); }
+
+  onChange()  { this.setState({ message: ClippyStore.getState() }); }
+
+  render() {
+    return (
+      <Alert> {this.state.message} </Alert>
+    );
+  }
+}
+
+export default Clippy;
+```

@@ -1,5 +1,5 @@
 ---
-title: Into to Flux - Lab
+title: Intro to Flux - Lab
 subtitle: ""
 created: "Thu Dec 17 2015 20:47:06 GMT-0600 (CST)"
 author: Jeffrey R. Hicks

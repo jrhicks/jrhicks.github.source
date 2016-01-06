@@ -8,6 +8,8 @@ theme: bs3
 
 ##Articles
 
+2015/01/06 - [[Confidently Starting A React Project]]
+
 2015/12/18 - [[Into to Flux - Lab]]
 
 2015/11/19 - [[Intro to ReactJS - Lab]]

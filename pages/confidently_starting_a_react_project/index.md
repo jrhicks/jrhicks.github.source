@@ -6,18 +6,16 @@ author: Jeffrey R. Hicks
 theme: bs3
 ---
 
-The Paradox of Choice
-=====
+2016 Javascript Fatigue Resolution
+====
 
-The Paradox of Choice - Why More Is Less is a 2004 book by American psychologist Barry Schwartz. In the book, Schwartz argues that eliminating consumer choices can greatly reduce anxiety for shoppers.
+Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix [Javascript Fatigue](http://tinyurl.com/zbahygs) in 2016.
 
-> Autonomy and Freedom of choice are critical  to our well being, and
-> choice is critical to freedom and autonomy. Nonetheless, though
-> modern Americans have more choice than any group of people ever has
-> before, and thus, presumably, more freedom and autonomy, we don't seem
-> to be benefiting from it psychologically.
->
-> quoted from Ch.5, [The Paradox of Choice, 2004](http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en)
+> Ultimately, the problem is that by choosing React
+> (and inherently JSX), you’ve unwittingly opted
+> into a confusing nest of build tools, boilerplate,
+> linters, & time-sinks to deal with before you ever
+> get to create anything.
 
 ## Modern React Choices
 
@@ -33,6 +31,8 @@ The Paradox of Choice - Why More Is Less is a 2004 book by American psychologist
 
 * Productivity Options: Dev Server, Hot Reloading, Linting, OpenBrowser
 
+* Coding Style: Filenames, Spacing, Casing, React createClass vs React.Component, ... much more
+
 * Code Organization: Nested Folders, LIFT
 
 * Flux Choices: Facebook's Flux, fluxxor, refluxjs, barracks, mcfly, marty, dispatchr, fetchr, fluxy, normalizr, flummox, alt, tuxx, redux
@@ -41,38 +41,47 @@ The Paradox of Choice - Why More Is Less is a 2004 book by American psychologist
 
 * Styling Choices: Inline, jsxstyle, css-modules, react-jss ...
 
-## Javascript Fatigue
-
-Eric Clemmons blew up twitter with a well timed proposal that the react community resolve to fix [Javascript Fatigue](http://tinyurl.com/zbahygs) in 2016.
-
-Some mixed reactions:
-
-@mjackson - This is kind of how I feel about #Javascript fatigue https://www.youtube.com/watch?v=akiVi1sR2rM (Skip to 2:25)
-
-@ryanflorence - I released Ember Tools Mar &#39;13 cause setting up Ember was terrible.&#10;Core team embraced ideas as ember-cli, first 1.x release July &#39;15.</p>
-
-@floydophone - The reactjs community needs more opinions to help out newbies. Here&#39;s my first pass. Feedback/PRs welcome! <a href="https://t.co/Tfohv11miV">https://t.co/Tfohv11miV</a>
-
 ## Fatigue Solutions
 
-* Relax - You don't have to pick the best for your project to be a success.
+### Mindfulness
 
-* Opinions - Pete Hunt's [React Howto](https://twitter.com/floydophone/status/684109201665208321) 1/4/16
+Understand [The Paradox of Choice, 2004](http://www.ted.com/talks/barry_schwartz_on_the_paradox_of_choice?language=en)
 
-* Boilerplates -  [Boilerplate Search Engine](http://andrewhfarmer.com/starter-project/) because a good boilerplate has **everything you need** and **nothing you don't**
+> Choice is critical to freedom and autonomy. Nonetheless, we
+> have have more choice than ever before but
+> we don't seem to be benefiting from it psychologically.
 
-* Tools & Generators - [The React File Generator](http://www.overreact.io/?utm_source=javascriptweekly&utm_medium=email)
+Relax - Success doesn't depend on picking the absolute best
 
-* Insight/guidance rather than more tools/opacity - You will find the most valuable thing is [Clear, Concise, Current, and Correct Instructions On Trusted Tools](https://github.com/soulmachine/react-starter-kits)
+Embrace Opinions
 
-Opinions & Instructions
+### Boilerplates & Generators
+
+Hard to find the *perfect boilerplate* and once installed can be a bit overwhelming: difficult to troubleshoot, difficult to extend & tweak.
+
+[Boilerplate Search Engine](http://andrewhfarmer.com/starter-project/) because a good boilerplate has **everything you need** and **nothing you don't**
+
+[The React File Generator](http://www.overreact.io/?utm_source=javascriptweekly&utm_medium=email)
+
+### Trusted Agents
+
+@floydophone - Pete Hunt - Worked on React at Facebook and wrote [React Howto](https://twitter.com/floydophone/status/684109201665208321) in response to Javascript Fatigue buzz.
+
+@ryanflorence - Ryan Florence - React heavyweight who wrote ember tools and react-router
+
+[Airbnb Style Guides](https://github.com/airbnb/javascript/tree/master/react)
+
+[Clear, Concise, Correct Guides](https://github.com/soulmachine/react-starter-kits)
+
+
+Confident Project Setup
 ====
 
-After studying the opinions, boilerplates, insight/guidance and messaging leaders on twitter.  Here are some pretty good choices for a project setup with enough information about each selection to both setup and understand the setup of your project.
+Setup your project yourself using the choices of trusted agents and crisp understanding of their configuration so that you can confidently extend, tweak, and troubleshoot.
 
 ## Package Manager
 
-Not really a choice.  NPM.  But don't just use it to install the tools for someone elses project, we are going to start and understand our own project:
+NPM -vs- Bower isn't really a choice.  NPM wins and Pete Hunt says its where learning needs to begin.  You are probably already familiar with *npm install*, but you may be less aware that your new project is initialized with npm.
 
 ```
 mkdir myproject
@@ -125,7 +134,18 @@ Reference:
 + [The Six Things You Need To Know About Babel 6](http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/)
 + [Using ES6 and ES7 in the Browser, with Babel 6 and Webpack](http://jamesknelson.com/using-es6-in-the-browser-with-babel-6-and-webpack/)
 
-## Building / Bundling
+## Building & Bundling
+
+Pete Hunt's Advice:
+
+> For a number of good technical reasons CommonJS modules (i.e. everything in
+> npm) cannot be used natively in the browser. You need a JavaScript
+> “bundler” to “bundle” these modules into .js files that you can include in
+> your web page with a &lt;script&gt; tag.
+
+> Examples of JavaScript bundlers include webpack and browserify. Both are
+> good choices, but I prefer webpack since it has a lot of features that make
+> development of large apps easier.
 
 Webpack - like any new build tool can be a little intimidating to learn.  These basics can get you going **very quickly** though:
 
@@ -213,63 +233,6 @@ module.exports = {
   }
 };
 ```
-
-## Module Format
-
-Okay.  We don't want to have to choose between AMD and [CommonJS](http://www.sitepoint.com/understanding-module-exports-exports-node-js/) so lets just [learn ES6 modules](http://exploringjs.com/es6/ch_modules.html).  No sweat, jump ahead of those that just copy and paste with an understanding of 2 basic syntaxes.
-
-* want to export multiple things, name them
-
-* only need to export one thing, export default
-
-```
-//------ lib.js ------
-export const sqrt = Math.sqrt;
-export function square(x) {
-    return x * x;
-}
-export function diag(x, y) {
-    return sqrt(square(x) + square(y));
-}
-
-//------ main.js ------
-import * as lib from 'lib';
-console.log(lib.square(11)); // 121
-console.log(lib.diag(4, 3)); // 5
-
-//------ main.js ------
-import { square, diag } from 'lib';
-console.log(square(11)); // 121
-console.log(diag(4, 3)); // 5
-You can also import the complete module:
-```
-
-If your browsing along and you see something like:
-
-```
-module.exports = {stuff}
-```
-
-That is CommonJS (written in ES5)  No biggie.  In ES6 its:
-
-```
-export default {stuff}
-```
-
-Use a *default* where it makes more sense for a single export.
-
-```
-For example, a function:
-
-//------ myFunc.js ------
-export default function () { ··· } // no semicolon!
-
-//------ main1.js ------
-import myFunc from 'myFunc';
-myFunc();
-
-```
-
 ## Productivity Options
 
 Productivity options can either speed up your project or grind you to a hault.  Pick the good ones, quickly understand their setup and add them to your project.  Don't look back.  You need:
@@ -279,6 +242,140 @@ Productivity options can either speed up your project or grind you to a hault.  
 * Hot Module Replacement
 
 * Browser Open
+
+## Style Guides
+
+One of the fastest ways to decrease choice and anxiety is to adopt and abide by a style guide.
+
+[Airbnb React/JSX Style Guide](https://github.com/airbnb/javascript/tree/master/react])
+ - A mostly reasonable style guide to React and JSX
+
+* Basic Rules
+
+* Class vs React.createClass
+
+* Naming
+
+* Declaration
+
+* Alignment
+
+* Quotes
+
+* Spacing
+
+* Props
+
+* Parentheses
+
+* Tags
+
+* Methods
+
+* Ordering
+
+```
+import React, { PropTypes } from 'react';
+
+const propTypes = {
+  id: PropTypes.number.isRequired,
+  url: PropTypes.string.isRequired,
+  text: PropTypes.string,
+};
+
+const defaultProps = {
+  text: 'Hello World',
+};
+
+class Link extends React.Component {
+  static methodsAreOk() {
+    return true;
+  }
+
+  render() {
+    return <a href={this.props.url} data-id={this.props.id}>{this.props.text}</a>
+  }
+}
+
+Link.propTypes = propTypes;
+Link.defaultProps = defaultProps;
+
+export default Link;
+```
+
+Install:
+
+    npm install --save-dev eslint babel-eslint eslint-config-airbnb eslint-plugin-react
+
+Add `.eslintrc`:
+
+```json
+{
+  "env": {
+    "node": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "globals": {
+    "React": true
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": "airbnb",
+  "rules": {
+    "comma-dangle": 0,
+    "no-console": 0,
+    "id-length": 0,
+    "react/prop-types": 0
+  }
+}
+```
+
+Add `.eslintignore`:
+
+    build/**
+    node_modules/**
+    **/*.css
+    **/*.html
+
+Add a subcommand `lint` to the `scripts` field of `package.json`:
+
+    "lint": "eslint 'src/**/*.@(js|jsx)'",
+
+Run `npm run lint` to lint all source code.
+
+Add eslint to git pre-commit hook, this way you will never commit in code that doesn't pass a check.
+
+    npm install --save-dev precommit-hook
+
+In addition to the `precommit-hook` package, this command will also
+
++ adds two files `.jshintrc` and `.jshintignore` to current project
++ adds a `pre-commit` field to `package.json`
++ adds two subcommands `lint` and `validate` to the `scripts` field if none exist
+
+The `lint` subcommand in `scripts` uses `eslint` instead of `jshint`, which means this starter kit doesn't use jshint at all, and this is true.
+
+Since eslint supports ES6 while jshint only has partial support for ES6, the obvious choice is eslint.
+
+Delete two files `.jshintrc` and `.jshintignore`:
+
+    rm .jshint*
+
+Reference:
+
++ [soulmachine/react-starter-kits](https://github.com/soulmachine/react-starter-kits/blob/master/README.md)
+
++ [ruanyf/react-babel-webpack-boilerplate](https://github.com/ruanyf/react-babel-webpack-boilerplate)
+
+
++ [5-step quick start guide to ESLint](http://codeutopia.net/docs/eslint/)
++ [A Comparison of JavaScript Linting Tools](http://www.sitepoint.com/comparison-javascript-linting-tools/)
++ [ruanyf/react-babel-webpack-boilerplate](https://github.com/ruanyf/react-babel-webpack-boilerplate)
++ [ruanyf/webpack-demos](https://github.com/ruanyf/webpack-demos)
++ [petehunt/webpack-howto](https://github.com/petehunt/webpack-howto)
 
 ##Folder Structure
 
@@ -534,56 +631,62 @@ const Contacts = React.createClass({
 export default Course;
 ```
 
-## ES6/ES2015 Adoption
+## Module Format
 
-* ES6 Classes - NO
+Okay.  We don't want to have to choose between AMD and [CommonJS](http://www.sitepoint.com/understanding-module-exports-exports-node-js/) so lets just [learn ES6 modules](http://exploringjs.com/es6/ch_modules.html).  No sweat, jump ahead of those that just copy and paste with an understanding of 2 basic syntaxes.
 
-* Enhanced Object Properties - YES
+* want to export multiple things, name them
 
-* ES6 Module - YES
-
-ES6 brings the option to create react components as classes that extend React.Component.  I choose React.createClass because:
-
-* Its a little less ES6 to learn
-
-* Less tedious: No need to manually bind functions
-
-* Consistently: Setting initial state through a lifecycle method instead of as a constructor responsibility seems more consistent with other ways I work with components.
-
-**React.createClass**
+* only need to export one thing, export default
 
 ```
-import React from 'react';
-
-const Contacts = React.createClass({
-  render() {
-    return (
-      <div></div>
-    );
-  }
-});
-
-export default Contacts;
-```
-
-**React.Component**
-
-```
-import React from 'react';
-
-class Contacts extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div></div>
-    );
-  }
+//------ lib.js ------
+export const sqrt = Math.sqrt;
+export function square(x) {
+    return x * x;
+}
+export function diag(x, y) {
+    return sqrt(square(x) + square(y));
 }
 
-export default Contacts;
+//------ main.js ------
+import * as lib from 'lib';
+console.log(lib.square(11)); // 121
+console.log(lib.diag(4, 3)); // 5
+
+//------ main.js ------
+import { square, diag } from 'lib';
+console.log(square(11)); // 121
+console.log(diag(4, 3)); // 5
+You can also import the complete module:
 ```
+
+If your browsing along and you see something like:
+
+```
+module.exports = {stuff}
+```
+
+That is CommonJS (written in ES5)  No biggie.  In ES6 its:
+
+```
+export default {stuff}
+```
+
+Use a *default* where it makes more sense for a single export.
+
+```
+For example, a function:
+
+//------ myFunc.js ------
+export default function () { ··· } // no semicolon!
+
+//------ main1.js ------
+import myFunc from 'myFunc';
+myFunc();
+
+```
+
 
 Build / Bundler
 =======

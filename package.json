@@ -1,7 +1,7 @@
 {
-  "name": "coolapp2",
+  "name": "jrhicks.github.io",
   "version": "0.0.0",
-  "description": "Generated with rpt.",
+  "description": "Source for jrhicks.github.io",
   "scripts": {
     "build": "webpack -d",
     "lint": "eslint 'src/**/*.@(js|jsx)'",

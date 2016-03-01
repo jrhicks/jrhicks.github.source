@@ -16,13 +16,7 @@ class MainPanel extends React.Component {
                   Jeffrey Hicks
                 </div>
                 <div className={styles.description}>
-                  Student of Simple
-                </div>
-                <div className={styles.description}>
-                  Meddler of Models
-                </div>
-                <div className={styles.description}>
-                  Designer and Doer
+                  Developer, designer, & mentor of web technologies and databases
                 </div>
               </div>
           </div>

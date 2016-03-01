@@ -16,9 +16,6 @@ Objectives
 
 * Build TodoMVC using Flux
 
-
-[[[Cool Location]]]
-
 Understand Flux
 =============
 

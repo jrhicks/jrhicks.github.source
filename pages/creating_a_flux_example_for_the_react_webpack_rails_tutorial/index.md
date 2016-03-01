@@ -1,1 +1,0 @@
-See [[Getting started with flux on rails]]

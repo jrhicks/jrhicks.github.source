@@ -1,0 +1,30 @@
+@import "../globals";
+
+@media (max-width: $break-point) {
+
+  .panelContainer {
+    padding: 0 $panel-container-phone-padding;
+  }
+
+  .panelContent {
+    width: 100%;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+  }
+}
+
+
+@media (min-width: $break-point) {
+
+  .panelContainer {
+    padding: 0 $panel-container-padding;
+  }
+
+  .panelContent {
+    width: $panel-content-width;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+  }
+}

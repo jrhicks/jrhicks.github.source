@@ -1,0 +1,30 @@
+@import "../globals";
+
+.panelContainer {
+  background-image: radial-gradient(ellipse at center, rgba(0,0,0,0.35) 0%,rgba(0,0,0,0.95) 100%),
+                    url("http://placemi.com/1200x400");
+  background-size: cover;
+  background-position:  center center;
+  padding: 0 $panel-container-padding;
+  border: 1px solid black;
+}
+
+.panelContent {
+  width: $panel-content-width;
+  font-family: $legible-font;
+  margin: 0 auto;
+  min-height: 300px;
+  color: white;
+}
+
+.heroMessage {
+  padding-top: 2em;
+  h1 {
+    font-size: 1.5em*2;
+    margin: 0;
+  }
+  p {
+    width: $panel-content-width/3;
+    font-size: 1.5em;
+  }
+}

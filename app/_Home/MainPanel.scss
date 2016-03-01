@@ -1,0 +1,83 @@
+@import "../globals";
+
+$blogWidth: $panel-content-width * 6/12 - $standard-gutter;
+$talksWidth: $panel-content-width * 6/12 - $standard-gutter;
+
+@media (max-width: $break-point) {
+
+  .blogColumn {
+    width: 100%;
+  }
+
+  .talksColumn {
+    width: 100%;
+  }
+
+  .panelContainer {
+    padding: 0 $panel-container-phone-padding;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    flex: 1;
+  }
+
+  .panelContent {
+    width: 100%;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+  }
+
+  .collectionOfYears {
+    font-size: 1.25em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    .collectionOfEntries {
+      > * {
+        display: block;
+      }
+      > * + * {
+        padding-top: 0.5em;
+      }
+    }
+  }
+
+}
+
+@media (min-width: $break-point) {
+  .panelContainer {
+    padding: 0 $panel-container-padding;
+  }
+
+  .panelContent {
+    > * + * {
+      margin-left: $standard-gutter;
+    }
+    width: $panel-content-width;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .blogColumn {
+    float: left;
+    width: $blogWidth;
+  }
+
+  .talksColumn {
+    float: left;
+    width: $talksWidth;
+  }
+
+  .collectionOfYears {
+    font-size: 1.25em;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    .collectionOfEntries {
+      > * {
+        display: block;
+      }
+      > * + * {
+        padding-top: 0.5em;
+      }
+    }
+  }
+}

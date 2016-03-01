@@ -1,0 +1,28 @@
+@import "../globals";
+
+<%for (var i=0; i < ctx.columns().length; i++) { -%>
+$<%=ctx.columns()[i].name%>Width: $panel-content-width * <%=ctx.columns()[i].width%>/12 - $standard-gutter;
+<%} -%>
+
+.panelContainer {
+  padding: 0 $panel-container-padding;
+}
+
+.panelContent {
+  > * + * {
+    margin-left: $standard-gutter;
+  }
+  width: $panel-content-width;
+  font-family: $legible-font;
+  color: $legible-font-color;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+<%for (var i=0; i < ctx.columns().length; i++) { -%>
+.<%=ctx.columns()[i].name%> {
+  float: left;
+  width: $<%=ctx.columns()[i].name%>Width;
+}
+
+<%} -%>

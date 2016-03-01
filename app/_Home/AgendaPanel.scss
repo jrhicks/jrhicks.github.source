@@ -1,0 +1,162 @@
+@import "../globals";
+
+
+.responsiveTable {
+  border: 1px solid #ccc;
+  width: 100%;
+  margin:0;
+  padding:0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  tr {
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  th, td {
+    padding: 10px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  th {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+}
+
+
+
+@media (max-width: $break-point) {
+
+  .buttonCell {
+    align: center;
+  }
+
+  .responsiveTable {
+    border: 0;
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      margin-top: 2em;
+    }
+
+    tr {
+      display: block;
+    }
+
+    td {
+      display: block;
+      text-align: right;
+      font-size: 0.9rem;
+      border-bottom: 1px dotted #ccc;
+    }
+
+    td:last-child {
+      border-bottom: 0;
+    }
+
+    td:before {
+      content: attr(value);
+      float: left;
+      width: 8em;
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-family: $legible-font;
+    font-weight: bold;
+    color: $legible-font-color;;
+  }
+
+  .button {
+    margin-right: 0.5em;
+    text-align: center;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    border-top: 1px solid $primary-color-light;
+    border-left: 1px solid $primary-color-light;
+    background-color: $primary-color;
+  }
+
+  .panelContainer {
+    padding: 0 $panel-container-phone-padding;
+  }
+
+  .panelContent {
+    width: 100%;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: $legible-font-color;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $break-point) {
+
+  .titleCell {
+    width: 40%;
+  }
+
+  .dateCell {
+    width: 20%;
+  }
+
+  .heading {
+    font-size: 2rem;
+    font-family: $legible-font;
+    font-weight: bold;
+    color: $legible-font-color;;
+  }
+
+  .button {
+    margin-right: 0.5em;
+    text-align: center;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: $primary-color;
+  }
+
+  .panelContainer {
+    padding: 0 $panel-container-padding;
+  }
+
+  .panelContent {
+    width: $panel-content-width;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: $legible-font-color;
+    margin: 0 auto;
+    overflow: hidden;
+    table {
+      margin-top: 1em;
+      width: 100%;
+      tr {
+      }
+      th {
+        font-size: 1.25rem;
+        color: $legible-font-color;
+        text-align: left;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+      }
+      td {
+        font-size: 1.1rem;
+        text-align: left;
+        padding-top: 0.75em;
+        padding-bottom: 0.75em;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import "../globals";
+
+.panelContainer {
+  padding: 0 $panel-container-padding;
+}
+
+.panelContent {
+  > * + * {
+    margin-left: $standard-gutter;
+  }
+  width: $panel-content-width;
+  font-family: $legible-font;
+  color: $legible-font-color;
+  margin: 0 auto;
+  overflow: hidden;
+}

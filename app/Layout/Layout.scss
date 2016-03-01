@@ -1,0 +1,57 @@
+@import "../globals";
+
+.tab {
+  display: inline-block;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-align: center;
+  color: $legible-font-color;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.tabs {
+  float: right;
+}
+
+.title {
+  display: inline-block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 0px;
+  padding-right: 10px;
+
+  text-decoration: none;
+  text-align: center;
+  color: $legible-font-color;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.panelContainer {
+  background-color: $grey;
+  border-top: 1px solid $grey-border;
+  border-bottom: 1px solid $grey-border;
+  padding: 0 $panel-container-padding;
+}
+
+.tabCollection {
+  > * + * {
+    margin-left: 0.5em;
+  }
+}
+
+.panelContent {
+  > * + * {
+    margin-left: $standard-gutter;
+  }
+  width: $panel-content-width;
+  font-family: $legible-font;
+  color: $legible-font-color;
+  margin: 0 auto;
+  overflow: hidden;
+}

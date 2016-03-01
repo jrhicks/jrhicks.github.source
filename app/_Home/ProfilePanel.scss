@@ -1,0 +1,63 @@
+@import "../globals";
+
+@media (max-width: $break-point) {
+  .media {  }
+  .media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+  .img {float:left; margin-right: 20px;}
+  .img--rev {float:right; margin-left: 10px;}
+  .img img {display:block; width: 100px;}
+  .bd {
+    > * + * {
+      margin-top: 0.5em;
+    }
+  }
+  .heading {font-weight: bold; color: $primary-color; font-size: 2em; padding-bottom: 0.5em;}
+  .description {font-size: 1.25em; font-weight: bold; margin: 0; padding: 0; padding-top: 0.05em; color: black; letter-spacing: 0px}
+
+  .panelContainer {
+    padding: 0 $panel-container-phone-padding;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    flex: 1;
+  }
+
+  .panelContent {
+    width: 100%;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $break-point) {
+  .media {}
+  .media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+  .img {float:left; margin-right: 20px;}
+  .img--rev {float:right; margin-left: 10px;}
+  .img img {display:block; width: 200px;}
+  .bd {
+    > * + * {
+      margin-top: 0.5em;
+    }
+  }
+  .heading {font-weight: bold; color: $primary-color; font-size: 2.5em; padding-bottom: 0.5em;}
+  .description {font-size: 2em; margin: 0; padding: 0; padding-top: 0.25em; color: black; letter-spacing: 1px}
+
+  .panelContainer {
+    padding: 0 $panel-container-padding;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    flex: 1;
+  }
+
+  .panelContent {
+    > * + * {
+      margin-left: $standard-gutter;
+    }
+
+    width: $panel-content-width;
+    font-family: $legible-font;
+    color: $legible-font-color;
+    margin: 0 auto;
+  }
+}

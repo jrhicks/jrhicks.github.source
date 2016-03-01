@@ -1,0 +1,15 @@
+/* Media Object in OOCS/BEM
+========================================================================== */
+
+.media {}
+.media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
+.img {float:left; margin-right: 10px;}
+.img--rev {float:right; margin-left: 10px;}
+.img img {display:block;}
+.bd {
+  > * + * {
+    margin-top: 0.5em;
+  }
+}
+.heading {font-weight: bold; color: black;}
+.description {}

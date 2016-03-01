@@ -1,0 +1,18 @@
+$primary-color: #288ECC;
+$primary-color-dark: hsl(206,52,12);
+$primary-color-light: hsl(206,100,65);
+
+$grey: whitesmoke;
+$grey-border: #ddd;
+$white: white;
+
+// Fonts
+$legible-font: 'Roboto', sans-serif;
+$legible-font-color: #66757f;
+$title-font: 'Roboto', sans-serif;
+$title-font-color: $primary-color-dark;
+
+// Sizing
+$panel-container-padding: 30px;
+$panel-content-width: 760px - ($panel-container-padding*2);
+$standard-gutter: 16px;

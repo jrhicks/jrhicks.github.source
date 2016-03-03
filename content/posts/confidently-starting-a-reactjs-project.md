@@ -22,7 +22,7 @@ Eric Clemmons blew up twitter with a well timed proposal that the react communit
 
 ## Just Want to Play?
 
-Powerfull build tools yield amazing benefit but come have a learning curve.  If you just want to play with react and see how it feels before you buy into all the tooling then just use a tutorial that has VERY LITTLE TOOLING.  I recommend: [Sample React App in 7 Steps](http://coenraets.org/blog/2014/12/sample-mobile-application-with-react-and-cordova/) Do not be fooled by the Cordova reference.  This is a very-low-tooling tutorial that will have you playing quickly.
+Powerful build tools yield amazing benefit but come have a learning curve.  If you just want to play with react and see how it feels before you buy into all the tooling then just use a tutorial that has VERY LITTLE TOOLING.  I recommend: [Sample React App in 7 Steps](http://coenraets.org/blog/2014/12/sample-mobile-application-with-react-and-cordova/) Do not be fooled by the Cordova reference.  This is a very-low-tooling tutorial that will have you playing quickly.
 
 Also Pete Hunt has some tips on getting started with React and proposes a learning sequence: [React Howto](https://twitter.com/floydophone/status/684109201665208321)
 

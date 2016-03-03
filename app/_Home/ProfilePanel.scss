@@ -11,14 +11,21 @@
       margin-top: 0.5em;
     }
   }
-  .heading {font-weight: bold; color: $primary-color; font-size: 2rem; padding-bottom: 0.25em;}
-  .description {font-size: 1.15em; font-weight: bold; margin: 0; padding: 0;  letter-spacing: 0px}
+  .heading {font-weight: bold; color: #fff; font-size: 2.5em; padding-bottom: 0.15em;}
+  .description {font-size: 2em; margin: 0; padding: 0; color: #AAA;}
 
   .panelContainer {
-    padding: 0 $panel-container-phone-padding;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    background-image: radial-gradient(ellipse at center,
+                                      rgba(0,0,0,0.35) 0%,
+                                      rgba(0,0,0,0.95) 100%),
+                      url("/assets/images/hero1.png");
+    padding: 0 $panel-container-padding;
+    padding-top: 5em;
+    padding-bottom: 3em;
     flex: 1;
+    border-bottom: #444;
+    background-size: cover;
+    background-position: center center;
   }
 
   .panelContent {
@@ -34,20 +41,27 @@
   .media, .bd {overflow:hidden; _overflow:visible; zoom:1;}
   .img {float:left; margin-right: 20px;}
   .img--rev {float:right; margin-left: 10px;}
-  .img img {display:block; width: 150px;}
+  .img img {display:block; width: 150px; clip-path: circle(75px at center);}
   .bd {
     > * + * {
       margin-top: 0.5em;
     }
   }
-  .heading {font-weight: bold; color: $primary-color; font-size: 2.5em; padding-bottom: 0.15em;}
-  .description {font-size: 2em; margin: 0; padding: 0; letter-spacing: 1px}
+  .heading {font-weight: bold; color: #fff; font-size: 2.5em; padding-bottom: 0.15em;}
+  .description {font-size: 2em; margin: 0; padding: 0; color: #AAA;}
 
   .panelContainer {
+    background-image: radial-gradient(ellipse at center,
+                                      rgba(0,0,0,0.35) 0%,
+                                      rgba(0,0,0,0.95) 100%),
+                      url("/assets/images/hero1.png");
     padding: 0 $panel-container-padding;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 5em;
+    padding-bottom: 3em;
     flex: 1;
+    border-bottom: #444;
+    background-size: cover;
+    background-position: center center;
   }
 
   .panelContent {

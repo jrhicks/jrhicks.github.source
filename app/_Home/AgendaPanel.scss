@@ -1,33 +1,6 @@
 @import "../globals";
 
 
-.responsiveTable {
-  border: 1px solid #ccc;
-  width: 100%;
-  margin:0;
-  padding:0;
-  border-collapse: collapse;
-  border-spacing: 0;
-  tr {
-    border: 1px solid #ddd;
-    padding: 5px;
-  }
-
-  th, td {
-    padding: 10px;
-    text-align: center;
-    font-weight: normal;
-  }
-
-  th {
-    text-transform: uppercase;
-    font-size: 14px;
-    letter-spacing: 1px;
-  }
-}
-
-
-
 @media (max-width: $break-point) {
 
   .buttonCell {
@@ -36,6 +9,12 @@
 
   .responsiveTable {
     border: 0;
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+
     thead {
       display: none;
     }
@@ -46,6 +25,23 @@
 
     tr {
       display: block;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background-color: white;
+      padding: 5px;
+
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
     }
 
     td {
@@ -90,6 +86,9 @@
 
   .panelContainer {
     padding: 0 $panel-container-phone-padding;
+    background-color: #eee;
+    padding-top: 2em;
+    padding-bottom: 2em;
   }
 
   .panelContent {
@@ -99,6 +98,9 @@
     margin: 0 auto;
     overflow: hidden;
   }
+
+
+
 }
 
 @media (min-width: $break-point) {
@@ -131,6 +133,39 @@
 
   .panelContainer {
     padding: 0 $panel-container-padding;
+    background-color: #eee;
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+
+  .responsiveTable {
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+
+    tr {
+      border-collapse: collapse;
+      border-spacing: 0;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 5px;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    th {
+      text-transform: uppercase;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
   }
 
   .panelContent {
@@ -142,17 +177,20 @@
     table {
       margin-top: 1em;
       width: 100%;
+      border-radius: 10px;
+      border: 1px solid #aaa;
+      background-color: white;
       tr {
       }
       th {
-        font-size: 1.25rem;
+        font-size: 1rem;
         color: $legible-font-color;
         text-align: left;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
       }
       td {
-        font-size: 1.1rem;
+        font-size: 1rem;
         text-align: left;
         padding-top: 0.75em;
         padding-bottom: 0.75em;

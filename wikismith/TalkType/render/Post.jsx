@@ -24,7 +24,7 @@ class Post extends React.Component {
   }
 
   componentDidMount() {
-    if(this.props.content.latitude && this.props.content.longitude) {
+    if (this.props.content.latitude && this.props.content.longitude) {
       let coords = {lat: this.props.content.latitude, lng: this.props.content.longitude};
       let map;
       map = new google.maps.Map(document.getElementById('map'), {

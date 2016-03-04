@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import { Spring } from 'react-motion';
 import wikismith from '../wikismith';
 import styles from './AgendaPanel.scss'
 
@@ -17,13 +18,27 @@ class AgendaPanel extends React.Component {
       .sortBy((p) => Date.parse(p.get('date'))).value;
   }
 
+  renderTitle(t) {
+    let results;
+    if (t.ready) {
+      results = wikismith.linkTo(t);
+    } else {
+      results = t.title;
+    }
+    return results;
+  }
+
   renderAction(t) {
     const results = [];
     if (t.register) {
-      results.push(<a className={styles.button} href={t.register}>Meetup</a>);
+      results.push(
+        <a className={styles.button} href={t.register}>Meetup</a>
+      );
     }
     if (t.video) {
-      results.push(<a className={styles.button} href={t.video}>Hangout</a>)
+      results.push(
+          <a className={styles.button} href={t.video}>Hangout</a>
+      );
     }
     return results
   }
@@ -38,33 +53,33 @@ class AgendaPanel extends React.Component {
           <table className={styles.responsiveTable}>
             <thead>
               <tr>
-                <th>
+                <th key="topic">
                   Topic
                 </th>
-                <th>
+                <th key="where">
                   Where
                 </th>
-                <th>
+                <th key="when">
                   When
                 </th>
-                <th>
+                <th key="acion">
 
                 </th>
               </tr>
             </thead>
             <tbody>
               {this.sortedContent().map((t) => {
-                return <tr>
-                  <td value="title" className={styles.titleCell}>
-                    { t.title }
+                return <tr key={t.slug}>
+                  <td key="topic" value="topic" className={styles.titleCell}>
+                    { this.renderTitle(t)}
                   </td>
-                  <td value="locaton">
+                  <td k="where" value="where">
                     { t.location }
                   </td>
-                  <td value="date" className={styles.dateCell}>
+                  <td key="when" value="when" className={styles.dateCell}>
                     { t.date }
                   </td>
-                  <td value="" className={styles.buttonCell}>
+                  <td key="action" value="" className={styles.buttonCell}>
                     { this.renderAction(t)}
                   </td>
                 </tr>

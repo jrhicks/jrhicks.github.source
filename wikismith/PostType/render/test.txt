@@ -1,0 +1,24 @@
+<script async
+class="speakerdeck-embed"
+data-id="5305bc1ee0854460a21a9fb6a81bd6b9"
+data-ratio="1.29456384323641"
+src="//speakerdeck.com/assets/embed.js"></script>
+
+
+
+var script = document.createElement("script");
+script.src = "//speakerdeck.com/assets/embed.js"
+script.async=1;
+script["data-ratio"]="1.29456384323641"
+script["data-id"]="5305bc1ee0854460a21a9fb6a81bd6b9"
+script.class="speakerdeck-embed"
+
+document.body.appendChild(script);
+
+
+var script = document.createElement("script");
+script.src = "//speakerdeck.com/assets/embed.js"
+script.async=1;
+script["data-ratio"]="1.29456384323641"
+script["data-id"]="5305bc1ee0854460a21a9fb6a81bd6b9"
+document.body.appendChild(script);

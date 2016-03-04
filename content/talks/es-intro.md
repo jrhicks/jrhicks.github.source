@@ -1,5 +1,5 @@
 ---
-title: Radical Data Management - An Intro to Event Sourcing
+title: Radical Data Mgmt With Event Sourcing
 slug: es-intro
 subtitle:
 event: 'Meetup'

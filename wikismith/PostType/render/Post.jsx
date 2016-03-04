@@ -62,6 +62,7 @@ class Post extends React.Component {
             {this.renderAuthor(this.props.content)}
           </div>
         </div>
+        
         <Body ast={this.props.content.ast} />
       </div>
     );

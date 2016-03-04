@@ -20,9 +20,11 @@
     "lorem-ipsum": "^1.0.3",
     "node-uuid": "^1.4.7",
     "react": "^0.14.5",
+    "react-async-script": "git+https://github.com/dozoisch/react-async-script.git",
     "react-dom": "^0.14.5",
     "react-gmaps": "^1.4.2",
     "react-highlight": "^0.6.1",
+    "react-motion": "^0.4.2",
     "react-router": "^2.0.0",
     "scourjs": "^1.0.1",
     "scroll-behavior": "^0.3.2"

@@ -1,7 +1,7 @@
 ---
-title: Style Principles and Tactics
+title: Style Design Patterns & Disciplines
 slug: ui-principles
-subtitle:
+subtitle: Re-usable CSS solutions to commonly occurring problems
 event: 'Guest Lecture'
 location: 'Iron Yard'
 date: 2016/03/04 10:00 CST
@@ -10,5 +10,8 @@ author: Jeffrey R. Hicks
 twitter: jrhicks
 type: post
 category: upcoming talk
+ready: true
 video: https://plus.google.com/hangouts/_/theironyard.com/jeff-hicks
 ---
+
+[[[ui principles deck]]]

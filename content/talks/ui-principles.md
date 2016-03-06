@@ -9,7 +9,7 @@ created: 2016-03-01T05:16:37.448Z
 author: Jeffrey R. Hicks
 twitter: jrhicks
 type: post
-category: upcoming talk
+category: past talks
 ready: true
 video: https://plus.google.com/hangouts/_/theironyard.com/jeff-hicks
 ---

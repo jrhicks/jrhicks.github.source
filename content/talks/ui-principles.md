@@ -18,7 +18,7 @@ Styles across many sites are surprisingly similar, but the CSS strategies to acc
 
 [[[ui principles deck]]]
 
-This presentation will help someone with a basic understanding of CSS to both identify the patterns used in and be able to code a site like the following:
+This presentation will help someone with a basic understanding of CSS to both identify the patterns used in and be able to code a site like the following.  An exercise has been linked below.
 
 <img src="/assets/images/cssday_twitter.png" width="100%"/>
 
@@ -42,3 +42,10 @@ Style Design Patterns
 * Tweets implemented with the Media Object Pattern.
 
 * Masonry Layout Pattern groups the tweets and right hand content while providing a soft grey to cover the majority of the screen real-estate while providing a high-contrast white for the content.
+
+Exercise
+-----
+
+As an exercise clone the repo at https://github.com/jrhicks/css-layout-patterns-example and update the CSS to produce:
+
+<img width="100%" src="https://raw.githubusercontent.com/jrhicks/css-layout-patterns-example/master/img/finished.png" />

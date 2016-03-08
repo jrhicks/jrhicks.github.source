@@ -56,6 +56,8 @@ These would be a bad
 Additional Resources
 =========
 
+* http://www.slideshare.net/ryanlabouve/web-typography-a-long-dark
+
 * http://design.tutsplus.com/articles/a-20-minute-intro-to-typography-basics--psd-3326
 
 * http://jamiewayne.com/2011/01/09/xxx-the-basics-of-typographic-families/

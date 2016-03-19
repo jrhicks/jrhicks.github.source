@@ -1,10 +1,10 @@
 ---
-title: ui principles deck
-slug: ui-principles-deck
+title: es-intro-deck
+slug: es-intro-deck
 subtitle:
 created: 2016-03-04T01:28:50.039Z
 author: Jeffrey R. Hicks
 twitter: jrhicks
 type: speakerdeck
-data-id: 5305bc1ee0854460a21a9fb6a81bd6b9
+data-id: 6eb0b02563724efa9698831d1179ecd4
 ---

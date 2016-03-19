@@ -11,8 +11,8 @@ class EmbedSpeakerDeck extends React.Component {
 
   render() {
     return (
-      <div className="speakerdeck-embed" data-id="5305bc1ee0854460a21a9fb6a81bd6b9">
-        Loading Slides ... 
+      <div className="speakerdeck-embed" data-id={this.props.content['data-id']}>
+        Loading Slides ...
       </div>
     );
   }

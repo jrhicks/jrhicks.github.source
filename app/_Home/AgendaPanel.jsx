@@ -48,7 +48,7 @@ class AgendaPanel extends React.Component {
       <div className={styles.panelContainer}>
         <div className={styles.panelContent}>
           <div className={styles.heading}>
-            Upcoming Hangouts
+            Lets Meetup
           </div>
           <table className={styles.responsiveTable}>
             <thead>

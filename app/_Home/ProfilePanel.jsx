@@ -13,7 +13,7 @@ class MainPanel extends React.Component {
                   Jeffrey Hicks
                 </div>
                 <div className={styles.description}>
-                  Developer, designer, & mentor
+                  Developer, designer, & presenter
                 </div>
               </div>
           </div>
@@ -21,7 +21,6 @@ class MainPanel extends React.Component {
       </div>
     );
   }
-
 }
 
 module.exports = MainPanel;

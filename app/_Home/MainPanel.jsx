@@ -28,7 +28,7 @@ class MainPanel extends React.Component {
     const results = new Map();
     let y;
     for (const p of items) {
-      y = new Date(p.created).getYear() + 1990;
+      y = new Date(p.created).getYear() + 1900;
       if (results.get(y) === undefined) {
         results.set(y, [p]);
       } else {

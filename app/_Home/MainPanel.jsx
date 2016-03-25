@@ -45,21 +45,6 @@ class MainPanel extends React.Component {
     return (
       <div className={styles.panelContainer}>
         <div className={styles.panelContent}>
-          <div className={styles.blogColumn}>
-            <h1>Blog Posts</h1>
-            <div className={styles.collectionOfYears}>
-              {this.getPostsByYear().map(([year, posts]) => {
-                return (
-                  <div>
-                    <h3>{year}</h3>
-                    <div className={styles.collectionOfEntries}>
-                      {posts.map((post) => wikismith.linkTo(post))}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
           <div className={styles.talksColumn}>
             <h1>Past Talks</h1>
             <div className={styles.collectionOfYears}>
@@ -75,6 +60,23 @@ class MainPanel extends React.Component {
               })}
             </div>
           </div>
+
+          <div className={styles.blogColumn}>
+            <h1>Blog Posts</h1>
+            <div className={styles.collectionOfYears}>
+              {this.getPostsByYear().map(([year, posts]) => {
+                return (
+                  <div>
+                    <h3>{year}</h3>
+                    <div className={styles.collectionOfEntries}>
+                      {posts.map((post) => wikismith.linkTo(post))}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </div>
     );

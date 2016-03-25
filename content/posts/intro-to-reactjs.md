@@ -1,7 +1,7 @@
 ---
 title: Intro to ReactJS - Lab
 slug: intro-to-reactjs
-subtitle: "Notes for a Meetup Presentation"
+summary: "Notes for a Meetup Presentation"
 created: "Thu Nov 19 2015 17:12:40 GMT-0600 (CST)"
 author: Jeffrey R. Hicks
 type: post

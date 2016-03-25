@@ -52,17 +52,18 @@ class Post extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className={styles.root}>
         <div className={styles.titleBox}>
-          <h1>{this.props.content.title}</h1>
-          <h3>{this.props.content.subtitle}</h3>
-          <div className={styles.publishedOn}>
-            {this.renderPublishedOn(this.props.content)}
+          <div className={styles.title}>{this.props.content.title}</div>
+          <div className={styles.byLine}>
             By&nbsp;
             {this.renderAuthor(this.props.content)}
           </div>
         </div>
-        
+        <div className={styles.summary}>
+          <em>Summary: </em>
+          {this.props.content.summary}
+        </div>
         <Body ast={this.props.content.ast} />
       </div>
     );

@@ -1,7 +1,7 @@
 ---
 title: Arkansas Dev. Hackathon 2015
 slug: arkansas-dev-hackathon-2015
-subtitle: "April 18th from 11 AM to 7 PM"
+summary: "April 18th from 11 AM to 7 PM"
 created: "Sat Apr 18 2015 12:35:13 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 twitter: jrhicks

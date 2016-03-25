@@ -1,17 +1,105 @@
 @import "../../globals";
 
-.titleBox {
-  border-left: 12px solid $primary-color;
-  padding-left: 16px;
-  h1 {
-    font-size: 2.7rem;
+@media (max-width: $break-point) {
+
+  .root {
+    > * {
+      margin-top: 20px;
+    }
   }
-  h3 {
-    font-size: 1.7rem;
+
+  .summary {
+    em {
+      color: $red;
+    }
+    padding-left: 1em;
+    border-left: 1px solid #eee;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $legible-font;
   }
-  .publishedOn {
-    font-size: 1.5em;
+
+  .titleBox {
+    text-rendering: optimizeLegibility;
+    font-family: $title-font;
+
+    > * + * {
+      margin-top: 0.25em;
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+
+    .byLine {
+      font-weigth: 350;
+      font-family: $legible-font;
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: -.004em;
+      a {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $legible-font-color;
+        text-decoration: none;
+      }
+    }
   }
-  margin-top: 60px;
-  margin-bottom: 50px;
+}
+
+@media (min-width: $break-point) {
+  .root {
+    margin-top: 60px;
+    > * + * {
+      margin-top: 35px;
+    }
+  }
+
+  .summary {
+    em {
+      color: $red;
+      font-style: normal;
+      font-weight: bold;
+    }
+    color: $red;
+    padding-left: 1.64em;
+    border-left: 1px solid #eee;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $legible-font;
+  }
+
+  .titleBox {
+    text-rendering: optimizeLegibility;
+    font-family: $title-font;
+
+    > * + * {
+      margin-top: 0.25em;
+    }
+
+
+    .title {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+
+    .byLine {
+      font-weigth: 350;
+      font-family: $legible-font;
+      font-size: 12px;
+      line-height: 1.5;
+      letter-spacing: -.004em;
+      a {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: $legible-font-color;
+        text-decoration: none;
+      }
+    }
+  }
 }

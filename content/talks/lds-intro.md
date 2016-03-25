@@ -1,7 +1,7 @@
 ---
 title: Lightning Design Systems In React
 slug: lds-intro
-subtitle:
+summary:
 event: 'Meetup'
 location: 'Iron Yard'
 date: 2016/04/15 12:00 CST

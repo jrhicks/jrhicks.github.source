@@ -1,7 +1,7 @@
 ---
 title: Confidently Starting A React Project
 slug: confidently-starting-a-react-project
-subtitle: "A case for building your own boilerplate"
+summary: "A case for building your own boilerplate"
 created: "Wed Jan 06 2016 15:46:39 GMT-0600 (CST)"
 author: Jeffrey R. Hicks
 twitter: jrhicks

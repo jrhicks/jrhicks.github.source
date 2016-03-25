@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './SpeakerDeck.scss';
 
 class EmbedSpeakerDeck extends React.Component {
 
@@ -11,8 +12,10 @@ class EmbedSpeakerDeck extends React.Component {
 
   render() {
     return (
-      <div className="speakerdeck-embed" data-id={this.props.content['data-id']}>
-        Loading Slides ...
+      <div className={styles.root}>
+        <div className="speakerdeck-embed" data-id={this.props.content['data-id']}>
+          Loading Slides ...
+        </div>
       </div>
     );
   }

@@ -1,6 +1,6 @@
 ---
 title: Offline Flux with LokiJS
-subtitle: "Data fetching and replication for Offline React Single Page Applications"
+summary: "Data fetching and replication for Offline React Single Page Applications"
 created: "Thu Mar 19 2015 20:14:25 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 theme: bs3

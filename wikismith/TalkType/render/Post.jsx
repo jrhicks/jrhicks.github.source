@@ -83,7 +83,7 @@ class Post extends React.Component {
         <div className={styles.titleBox}>
           {this.renderMap(this.props.content)}
           <h1>{this.props.content.title}</h1>
-          <h3>{this.props.content.subtitle}</h3>
+          <h3>{this.props.content.summary}</h3>
           <div className={styles.publishedOn}>
             {this.renderPublishedOn(this.props.content)}
             By&nbsp;

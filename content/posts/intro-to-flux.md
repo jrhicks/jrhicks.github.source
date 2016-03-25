@@ -1,7 +1,7 @@
 ---
 title: Intro to Flux
 slug: intro-to-flux
-subtitle: "Notes for meetup presentation"
+summary: "Notes for meetup presentation"
 created: "Thu Dec 17 2015 20:47:06 GMT-0600 (CST)"
 author: Jeffrey R. Hicks
 type: post

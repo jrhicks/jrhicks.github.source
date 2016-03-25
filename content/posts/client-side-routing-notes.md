@@ -1,7 +1,7 @@
 ---
 title: Client Side Routing Notes
 slug: client-side-routing-notes
-subtitle: "Navigating Screens and Data In A React Flux App"
+summary: "Navigating Screens and Data In A React Flux App"
 created: "Sat Mar 14 2015 13:22:14 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 twitter: jrhicks

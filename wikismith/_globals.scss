@@ -5,14 +5,22 @@ $primary-color-light: hsl(206,100,65);
 $grey: whitesmoke;
 $grey-border: #ddd;
 $white: white;
+$red: #b30000;
 
 // Fonts
-$legible-font: 'Roboto', sans-serif;
-$legible-font-color: #66757f;
-$title-font: 'Roboto', sans-serif;
+$legible-font: Georgia, Times, 'Times New Roman', serif;
+// $legible-font-color: #66757f;
+$legible-font-color: rgba(0,0,0,.8);
+$title-font: "Helvetica Neue", "Helvetica", "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+// $title-font: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
 $title-font-color: $primary-color-dark;
 
 // Sizing
 $panel-container-padding: 30px;
-$panel-content-width: 760px - ($panel-container-padding*2);
-$standard-gutter: 16px;
+$panel-container-phone-padding: 10px;
+$panel-content-width: 600px - ($panel-container-padding*2);
+$standard-gutter: 20px;
+
+// Responsive
+$panel-container-phone-padding: 10px;
+$break-point: 600px;

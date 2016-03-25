@@ -1,37 +1,153 @@
 @import "../../globals";
 
-.paragraph {
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-}
+@media (max-width: $break-point) {
+  .paragraph {
+    text-rendering: optimizeLegibility;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
 
-.codeContainer {
-  margin-left: -30px;
-  margin-right: -30px;
-  .code {
+  .codeContainer {
+    text-rendering: optimizeLegibility;
+    margin-left: -30px;
+    margin-right: -30px;
+    .code {
+      background-color: #f8f8f8;
+      padding-left: $panel-container-padding;
+      padding-right: $panel-container-padding;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      color: black;
+    }
+  }
+
+  .codespan {
+    text-rendering: optimizeLegibility;
     background-color: #f8f8f8;
-    padding-left: $panel-container-padding;
-    padding-right: $panel-container-padding;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    color: black;
+  }
+
+  .section {
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: $legible-font;
+    h1 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h2 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h3 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h4 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h5 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h6 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
   }
 }
 
-.codespan {
-  background-color: #f8f8f8;
-}
 
-.section {
-  font-size: 1.2em;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  h1 {
-    font-family: $legible-font;
+@media (min-width: $break-point) {
+  .paragraph {
+    text-rendering: optimizeLegibility;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
-  h2 {
-    font-family: $legible-font;
+
+  .codeContainer {
+    text-rendering: optimizeLegibility;
+    margin-left: -30px;
+    margin-right: -30px;
+    .code {
+      background-color: #f8f8f8;
+      padding-left: $panel-container-padding;
+      padding-right: $panel-container-padding;
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+      color: black;
+    }
   }
-  h3 {
+
+  .codespan {
+    text-rendering: optimizeLegibility;
+    background-color: #f8f8f8;
+  }
+
+  .section {
+    font-size: 18px;
+    line-height: 1.5;
     font-family: $legible-font;
+    h1 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h2 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+
+    }
+    h3 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h4 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h5 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
+    h6 {
+      font-family: $title-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 1.12;
+      letter-spacing: -.022em;
+    }
   }
 }

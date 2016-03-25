@@ -1,7 +1,7 @@
 ---
 title: Schema Driven React Form Generation
 slug: react-form-generation
-subtitle: "A case for data introspection standards in the React Ecosystem."
+summary: "A case for data introspection standards in the React Ecosystem."
 created: "Mon Mar 30 2015 09:19:12 GMT-0500 (CDT)"
 author: Jeffrey R. Hicks
 twitter: jrhicks

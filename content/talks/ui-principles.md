@@ -1,7 +1,7 @@
 ---
 title: Style Design Patterns & Disciplines
 slug: ui-principles
-subtitle: Re-usable CSS solutions to commonly occurring problems
+summary: Re-usable CSS solutions to commonly occurring problems
 event: 'Guest Lecture'
 location: 'Iron Yard'
 date: 2016/03/04 10:00 CST

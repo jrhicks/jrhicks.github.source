@@ -1,7 +1,7 @@
 ---
 title: Introduction to ES6
 slug: introduction-to-es6
-subtitle: "Understanding, Building, Linting and Tooling for ES6"
+summary: "Understanding, Building, Linting and Tooling for ES6"
 created: "Mon Feb 23 2015 08:40:59 GMT-0600 (CST)"
 author: Jeffrey R. Hicks
 type: post

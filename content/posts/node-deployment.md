@@ -12,11 +12,19 @@ type: post
 Configuration Management & Deployment
 ------------------------------
 
+* [Puppet](https://puppet.com/)
+
+  * [What is Puppet?](https://vimeo.com/60768300)
+
+  * [ThoughtWorks Trial Blip](https://www.thoughtworks.com/radar/tools/puppet)
+
 * [Ansible](https://www.ansible.com)
 
  * [ThoughtWorks Adopt Blip](https://www.thoughtworks.com/radar/tools/ansible)
 
- * [Rolling Deployments with Ansible](https://sysadmincasts.com/episodes/47-zero-downtime-deployments-with-ansible-part-4-4) - Wow!
+ * [Rolling Deployments with Ansible](https://sysadmincasts.com/episodes/47-zero-downtime-deployments-with-ansible-part-4-4) - Wow!  Ryan Bates Quality Instructions
+
+ * [Ansible is Trending](https://www.ansible.com/blog/another-good-year-for-ansible-users) and [Winning on StackShare](http://stackshare.io/server-configuration-and-automation)
 
  * [Use Ansible To Setup Node.js Application](http://slash4.net/blog/deployment-automation/howto-use-ansible-to-setup-a-nodejs-gaming-application.html)
 
@@ -26,7 +34,9 @@ Configuration Management & Deployment
 
  * [Ansible Best Practices](http://docs.ansible.com/ansible/playbooks_best_practices.html)
 
- * [How Twitter Uses Ansible](https://www.youtube.com/watch?v=fwGrKXzocg4)
+ * [Ansible and Docker](https://www.ansible.com/docker)
+
+ * [How Twitter Uses Ansible](https://www.youtube.com/watch?v=fwGrKXzocg4) - They mention [Pants Build](https://pantsbuild.github.io/) to drive adoption.  And [Collins](https://tumblr.github.io/collins/index.html#links) as a single point of truth. Shout-outs to [Aurora](http://aurora.apache.org/) and [Mesos](http://mesos.apache.org/).  They don't seem to use the commercial ansible-tower.  They record playbook run details centrally.
 
 * [Capistrano](http://capistranorb.com/)
 
@@ -35,14 +45,6 @@ Configuration Management & Deployment
  * [Standalone Puppet with Capistrano](https://spin.atomicobject.com/2012/07/26/standalone-puppet-with-capistrano/)
 
  * [Ship-it](https://github.com/shipitjs/shipit) - Node.js Capistrano Clone
-
-* [Puppet](https://puppet.com/)
-
-  * [What is Puppet?](https://vimeo.com/60768300)
-
-  * [eLearning Catalog](https://learn.puppet.com/catalog)
-
-  * [ThoughtWorks Trial Blip](https://www.thoughtworks.com/radar/tools/puppet)
 
 * [HashiCorp](https://www.hashicorp.com/)
 
@@ -66,31 +68,49 @@ Configuration Management & Deployment
 
 * [Chef](https://puppet.com/)
 
+* [Azk](http://www.azk.io/) - Developer Machine Configuration
+
 
 Continuous Integrations
 -----------------------
 
 * [Practices and Benefits](http://www.martinfowler.com/articles/continuousIntegration.html)
 
-* [Travis CI](https://travis-ci.org/) - $129/month 2 concurrent builds
+* [Jenkins](https://jenkins.io/) - Free, Hosted Internally
+
+* [Travis CI](https://travis-ci.org/) - $120/month 2 concurrent builds
+
+* [CodeShip](https://codeship.com/)
+
+* [CircleCI](https://circleci.com)
+
+* [Wercker](http://wercker.com/) - Container Centric
+
+* [Drone.io](https://drone.io/) -  $25/month for 5 private repos, **ONLY** $49/month unlimited
+
+  * [Drone](https://github.com/drone/drone)
+
+  * [Create a Drone with Ansible](http://tech.willandskill.se/w-s-devops-part-2-setting-up-a-continuous-integration-ci-server-using-docker-and-drone-io/)
+
+* [Sempaphore CI](https://semaphoreci.com)
+
+ * [Good Tutorials](https://semaphoreci.com/community/tutorials)
+
+* [Go.CD](https://www.go.cd/)
 
 * [Snap CI](https://www.snap-ci.com/) - $30/month 1 concurrent build
 
-* [Strider.CD](https://github.com/Strider-CD) - Node.js open source
+* [Strider.CD](https://github.com/Strider-CD) - Free, Hosted Internally - Node.js
 
-* [Jenkins](https://jenkins.io/) - Free
+* [Bamboo](https://www.atlassian.com/software/bamboo) - $10/month for up to 10 jobs
 
-* [Bamboo](https://www.atlassian.com/software/bamboo)
+ * [Branch Per Issue Workflow](https://www.atlassian.com/continuous-delivery/continuous-delivery-workflows-with-feature-branching-and-gitflow)
 
 * [Concourse CI](http://concourse.ci/)
 
   * [ThoughtWorks CI Assess](https://www.thoughtworks.com/radar/tools/concourse-ci)
 
   * [CI That Scales with your Project](https://www.youtube.com/watch?v=mYTn3qBxPhQ)
-
-* [Go.CD](https://www.go.cd/)
-
-* [Drone.io](https://drone.io/) - $25/month for 5 private repos
 
 
 Monitoring, Security
@@ -123,6 +143,10 @@ Containerization
 
 * [Docker](https://www.docker.com/)
 
+ * [Dockerizing a Node.js App](https://semaphoreci.com/community/tutorials/dockerizing-a-node-js-web-application)
+
+* [Mantl.io](http://mantl.io/) - Wow!
+
 * [Mesos](http://mesos.apache.org/)
 
 * [Kubernetes](http://kubernetes.io/)
@@ -138,8 +162,6 @@ Books, Conferences & Overviews
    * [Operability.io Talk](https://www.youtube.com/watch?v=a4PuAkI7uGg&index=6&list=PLK4VB0cauli7-_RIvpmn651ePtddw9_Fp)
 
 * [ThoughtWorks Tech Radar](https://www.thoughtworks.com/radar/tools)
-
-* [stackshare server configuration and automation](http://stackshare.io/server-configuration-and-automation)
 
 * [Continuous Delivery Book](http://www.amazon.com/gp/product/0321601912)
 

@@ -34,7 +34,8 @@ module.exports = {
       },
       {
         test: /\.md$/,
-        loader: 'wikismith-md-loader'
+        loader: 'wikismith-md-loader',
+        exclude: /node_modules/
       }
     ]
   },

@@ -32,7 +32,7 @@ class AgendaPanel extends React.Component {
     const results = [];
     if (t.register) {
       results.push(
-        <a className={styles.button} href={t.register}>Meetup</a>
+        <a className={styles.button} href={t.register}>Register</a>
       );
     }
     if (t.video) {
@@ -48,7 +48,7 @@ class AgendaPanel extends React.Component {
       <div className={styles.panelContainer}>
         <div className={styles.panelContent}>
           <div className={styles.heading}>
-            Lets Meetup
+            Upcoming Talks
           </div>
           <table className={styles.responsiveTable}>
             <thead>

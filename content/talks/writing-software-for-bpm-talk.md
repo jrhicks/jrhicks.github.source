@@ -9,7 +9,7 @@ created: 2016-09-01T05:16:37.449Z
 author: Jeffrey R. Hicks
 twitter: jrhicks
 type: post
-category: upcoming talk
+category: past talks
 ready: true
 register: http://www.meetup.com/Little-Rock-NET-User-Group/events/235106149/?a=socialmedia
 ---

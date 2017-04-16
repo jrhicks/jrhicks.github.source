@@ -31,6 +31,8 @@ In summary:
 
 * Avoid Singletons as a form of global state
 
+* Avoid static properties and fields as a form of global state
+
 * Avoid the new operator for anything but value objects
 
 * Utilize higher order functions

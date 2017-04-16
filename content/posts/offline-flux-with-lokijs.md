@@ -9,13 +9,13 @@ cover: true
 type: post
 ---
 
-In [my last post](/client_side_routing_notes/index.html), navigating **data space** was proposed as one of a few concerns of client side routing and the following architectures were investigated:
+In [my last post](/#/content/client-side-routing-notes), navigating **data space** was proposed as one of a few concerns of client side routing and the following architectures were investigated:
 
-* Dan Abramov's [Content Stores Pattern](/client_side_routing_notes/index.html#md-content-stores)
+* Dan Abramov's Content Stores Pattern
 
-* Facebook's [Relay Architecture](/client_side_routing_notes/index.html#md-relay-and-graphql)
+* Facebook's Relay Architecture
 
-* A Home Brewed [Offline Partitions Store](/client_side_routing_notes/index.html#md-offline-partitions-store)
+* A Home Brewed Offline Partitions Store
 
 In this article I recap these patterns quickly and introduce how an offline flux pattern and example project that draws on qualities of each of these.
 

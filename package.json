@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "description": "Source for jrhicks.github.io",
   "scripts": {
-    "build": "webpack -d --optimize-occurrence-order --optimize-minimize --optimize-dedupe",
+    "analyze": "`yarn bin`/webpack-bundle-analyzer ./stats.json build",
+    "build": "webpack -d --profile --json --optimize-occurrence-order --optimize-minimize --optimize-dedupe > stats.json",
     "lint": "eslint 'src/**/*.@(js|jsx)'",
     "start": "webpack-dev-server --devtool source-map --inline --progress --colors --content-base build",
     "browserstack": "node browserstack_tunnel.js",
@@ -27,7 +28,8 @@
     "react-motion": "^0.4.2",
     "react-router": "^2.0.0",
     "scourjs": "^1.0.1",
-    "scroll-behavior": "^0.3.2"
+    "scroll-behavior": "^0.3.2",
+    "webpack-bundle-analyzer": "^2.3.1"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.1",
@@ -46,7 +48,6 @@
     "eslint-plugin-react": "^3.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
-    "wikismith-md-loader": "https://github.com/jrhicks/wikismith-md-loader/archive/pre1.tar.gz",
     "node-sass": "^3.4.2",
     "open-browser-webpack-plugin": "0.0.2",
     "postcss-discard-comments": "^2.0.3",
@@ -57,6 +58,7 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.14.0",
+    "wikismith-md-loader": "https://github.com/jrhicks/wikismith-md-loader/archive/pre1.tar.gz"
   }
 }

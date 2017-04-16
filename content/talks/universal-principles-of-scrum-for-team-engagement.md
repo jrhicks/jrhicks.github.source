@@ -13,3 +13,17 @@ category: upcoming talk
 ready: false
 register: https://2017.musiccityagile.org/
 ---
+
+* Daniel H. Pink
+
+ * http://www.softdevbigideas.com/bibliography.html#pink-2009
+
+ * Intrinsic Motivation -vs- Extrinsic Motivation
+
+  * Autonomy
+
+  * Mastery
+
+  * Purpose
+
+ * Ted Talk - Daniel H Pink

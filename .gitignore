@@ -5,3 +5,5 @@ build/app.css.map
 build/bundle.js
 build/bundle.js.map
 build/index.html
+stats.json
+npm-debug.log

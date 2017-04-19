@@ -10,7 +10,7 @@ class Content extends React.Component {
       <div className={styles.panelContainer}>
         <div className={styles.panelContent}>
           <div className={styles.homeNav}>
-            <a href="#/">My Other Talks And Blog Posts</a>
+            &larr; <a href="#/">Home</a>
           </div>
 
           {wikismith.renderBySlug(slug)}
